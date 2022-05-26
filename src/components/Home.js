@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/home.css';
-import logo from '../assets/logo-vector.svg';
+import logo from '../assets/logo.svg';
 
 const Home = () => {
     return(
@@ -8,14 +8,50 @@ const Home = () => {
             <header>
                 <img src={logo}/>
                 
-                <h3> Escolha como você gostaria de se cadastrar. </h3>
+                <h2>Escolha como você gostaria de se cadastrar.</h2>
                 
             </header>
 
             <main>
-                <section>
-                <div className='left-container'></div>
-                <div className='right-container'></div>
+                <section className='main-section'>
+                <div className='left-container'>
+                    
+                    <div className='wrapper'>
+                        
+                        <h1 className='title'>Aluno</h1>
+
+                        <div className='first-wrap'>
+                        <div className='sec-wrap'>
+                            <h3 className='text'>Encontre professores que te auxiliem nos estudos nas disciplinas de sua escolha.</h3>
+                        </div>
+                    </div>
+
+                        <div className='btn-wrapper'> 
+                            <button>Entrar</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+        
+                <div className='right-container'>
+                    
+                    <div className='wrapper'>
+                        
+                        <h1 className='title'>Professor</h1>
+
+                        <div className='first-wrap'>
+                        <div className='sec-wrap'>
+                            <h3 className='text'>Contribua de forma voluntária no conhecimento de estudantes de todo o país.</h3>
+                        </div>
+                    </div>
+                        
+                        
+                        <div className='btn-wrapper'> 
+                            <button>Entrar</button>
+                        </div>
+                    </div>
+                </div>
                 </section>
             </main>
 
