@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins&display=swap');
+
 
 body {
-    background: #26ace2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background: #f8f8ff;
+    height: 100vh;
+    overflow-x: hidden;
+    
 }
 
 header {
@@ -13,29 +13,47 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 20vh;
+    height: 15vh;
     padding: 2rem;
+    
 }
 
+/* header img {
+    width:  22.05vw;
+    height: 14.45vh;
+} */
 
-header h2 {
+
+
+header h3 {
+    color: #597DA8;
     font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
-.main-section {
+main {
+    height: 85%;
+}
+
+
+
+.main-section{
     display: flex;
-    height: 80vh;
+    height: 100%;
 }
 
 .left-container, .right-container {
-    width: 50%;
+    width: 50vw;
     height: 100%;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
+
+
 .left-container:hover {
-    color: #fff;
     background: url(../assets/bg-student.svg) no-repeat center center #04345C;
     background-size: cover;
     height: 100%;
@@ -43,22 +61,40 @@ header h2 {
 }
 
 .right-container:hover {
-    color: #fff;
-    background: url(../assets/bg-teacher.svg) no-repeat center center blue;
+    background: url(../assets/bg-teacher.svg) no-repeat center center #04345C;
     background-size: cover;
     height: 100%;
     transition: 0.3s ease-in-out;
 }
 
+.left-container:hover .title {
+    color: #f8f8ff;
+}                                   /* muda a cor dos titulos (aluno e professor) no hover das divs */
+
+.right-container:hover .title {
+    color: #f8f8ff;
+}   
+
+.left-container:hover .text {
+    color: #f8f8ff;
+}                           /* muda a cor dos parágrafos no hover das divs */
+
+.right-container:hover .text {
+    color: #f8f8ff;
+    
+}    
+
 .left-container:hover button {
-    color: #fff;
-    border: 1px solid #fff;
+    color: #f8f8ff;
+    border: 1px solid #f8f8ff;
+    transition: 0.3s ease-in-out;
 }                                
                             /* muda a cor dos botões no hover das divs */
 
 .right-container:hover button { 
-    color: #fff;
-    border: 1px solid #fff;
+    color: #f8f8ff;
+    border: 1px solid #f8f8ff;
+    transition: 0.3s ease-in-out;
 }
 
 .title {
@@ -77,28 +113,29 @@ header h2 {
     height: 100%;
 }
 
-.first-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5rem;
-    width: 100%;
-}
-
-.sec-wrap {
-    width: 80%;
+.title {
+    margin: 0;    
+    font-family: 'Fredoka One', cursive;
+    text-transform: uppercase;
+    color: #597DA8;
+    letter-spacing: 1.5px;
+    font-weight: 300;
 }
 
 .text {
-    font-family: 'Montserrat';
+    width: 85%;
+    margin-top: 4.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.75vw;
     text-align: center;
+    color: #597DA8;
 }
 
 .btn-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 5rem;
+    margin-top: 4.5rem;
 }
 
 .btn-wrapper button {
@@ -107,23 +144,69 @@ header h2 {
     font-size: 16px;
     font-family: 'Poppins';
     font-weight: 600;
-    border: 1px solid #000;
+    border: 2px solid #597DA8;
     border-radius: 2rem;
     background: none;
     cursor: pointer;
-    transition: 0.3s ease-out;
+    color: #597DA8;
 }
 
 .btn-wrapper button:hover {
-    background: #fff;
-    color: #000;
-    transition: 0.3s ease-in;
+    background-color: #f8f8ff;
+    color: #597DA8;
 }
+
+
+@media (max-width: 999px) {
+   
+
+    .left-container {
+        background: url(../assets/bg-student.svg) no-repeat center center #04345C;
+        background-size: cover;
+        
+    }
+
+    .left-container:hover, .right-container:hover {
+        background-size: cover;
+        transition: none;
+    }
+
+    .left-container:hover button, .right-container:hover button {
+        color: #597DA8;
+        
+    }
+
+    .right-container {
+        background: url(../assets/bg-teacher.svg) no-repeat center center #04345C;
+        background-size: cover;
+        
+    }
+
+    .title {
+        color: #f8f8ff;
+    }
+
+    .text {
+        color: #f8f8ff;
+        font-size: 1.85vw;
+    }
+
+ .btn-wrapper button {
+        background: #f8f8ff;
+        color: #597DA8;
+        border: 2px solid #f8f8ff;
+    }
+
+    .btn-wrapper button:hover {
+        transition: none;
+    }
+}
+
 
 
 @media (max-width: 768px) {
 
-    header h2 {
+    header h3 {
         font-size: 20px;
     }
     
@@ -137,42 +220,34 @@ header h2 {
         display: block;
         width: 100vw;
         padding: 2rem;
-        color: #fff;
+        color: #f8f8ff;
     }
 
-    .left-container {
-        background: url(../assets/bg-student.svg) no-repeat center center #04345C;
-        background-size: contain;
-        
+   .text {
+        font-size: 17.8px;
     }
 
-    .left-container:hover, .right-container:hover {
-        background-size: contain;
-        
+}
+
+@media (max-width: 520px) {
+
+    header img {
+        width: 150px;
+        height: 47.3px;
     }
 
-    .left-container:hover button, .right-container:hover button {
-        color: #000;
-        
+    header h3 {
+        font-size: 15px;
     }
 
-    .right-container {
-        background: url(../assets/bg-teacher.svg) no-repeat center center #26ACE2;
-        background-size: contain;
-        
-    }
-
-
-    .btn-wrapper {
-        border: 1px solid black;
-    }    
-
-    .btn-wrapper button {
-        background: #fff;
-        color: #000;
-        border: none;
+    .text {
+        font-size: 13.8px;
     }
 }
+
+
+
+
 
 
 
