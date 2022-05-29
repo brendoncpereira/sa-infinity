@@ -4,8 +4,7 @@
 body {
     background: #f8f8ff;
     height: 100vh;
-    overflow-x: hidden;
-    
+    overflow: hidden;
 }
 
 header {
@@ -54,14 +53,14 @@ main {
 
 
 .left-container:hover {
-    background: url(../assets/bg-student.svg) no-repeat center center #04345C;
+    background: url(../assets/bg-student.svg) no-repeat center center #1B343B;
     background-size: cover;
     height: 100%;
     transition: 0.3s ease-in-out;
 }
 
 .right-container:hover {
-    background: url(../assets/bg-teacher.svg) no-repeat center center #04345C;
+    background: url(../assets/bg-teacher.svg) no-repeat center center #1B343B;
     background-size: cover;
     height: 100%;
     transition: 0.3s ease-in-out;
@@ -86,7 +85,7 @@ main {
 
 .left-container:hover button {
     color: #f8f8ff;
-    border: 1px solid #f8f8ff;
+    border: 2px solid #f8f8ff;
     transition: 0.3s ease-in-out;
 }                                
                             /* muda a cor dos botões no hover das divs */
@@ -97,13 +96,7 @@ main {
     transition: 0.3s ease-in-out;
 }
 
-.title {
-    font-family: 'Poppins';
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 0;
-}
+
 
 .wrapper {
     display: flex;
@@ -126,10 +119,11 @@ main {
     width: 85%;
     margin-top: 4.5rem;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.75vw;
+    font-size: 1.5vw;
     text-align: center;
     color: #597DA8;
-}
+    font-weight: 600;
+} 
 
 .btn-wrapper {
     display: flex;
@@ -153,7 +147,7 @@ main {
 
 .btn-wrapper button:hover {
     background-color: #f8f8ff;
-    color: #597DA8;
+    color: #1b343b;
 }
 
 
@@ -161,7 +155,7 @@ main {
    
 
     .left-container {
-        background: url(../assets/bg-student.svg) no-repeat center center #04345C;
+        background: url(../assets/bg-student.svg) no-repeat center center #1B343B;
         background-size: cover;
         
     }
@@ -177,7 +171,7 @@ main {
     }
 
     .right-container {
-        background: url(../assets/bg-teacher.svg) no-repeat center center #04345C;
+        background: url(../assets/bg-teacher.svg) no-repeat center center #1B343B;
         background-size: cover;
         
     }
@@ -199,6 +193,7 @@ main {
 
     .btn-wrapper button:hover {
         transition: none;
+        
     }
 }
 
@@ -206,8 +201,17 @@ main {
 
 @media (max-width: 768px) {
 
+    body {
+        overflow-y: scroll;
+    }
+
     header h3 {
         font-size: 20px;
+    }
+
+    header img {
+        width: 215px;
+        height: 67.41px;
     }
     
     .main-section{
@@ -232,8 +236,8 @@ main {
 @media (max-width: 520px) {
 
     header img {
-        width: 150px;
-        height: 47.3px;
+        width: 200px;
+        height: 62.7px;
     }
 
     header h3 {
