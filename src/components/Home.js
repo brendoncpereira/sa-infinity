@@ -4,55 +4,45 @@ import logo from '../assets/logo.svg';
 
 const Home = () => {
     return(
-        <body>
-            <header>
-                <img src={logo}/>
-                
-                <h3>Escolha como você gostaria de se cadastrar.</h3>
-                
-            </header>
+            <body>
+                <header>
+                   <img src={logo}/>
 
-            <main>
-                <section className='main-section'>
-                <div className='left-container'>
-                    
+                   <h2>Escolha como você gostaria de se cadastrar.</h2>
+                </header>
+
+                <main>
+
                     <div className='wrapper'>
-                        
-                        <h1 className='title'>Aluno</h1>
+                        <div className='lf-box'>
+                            <div className='wrap-content'>
+                           
+                            <h1>Aluno</h1>
 
-                      
-                            <p className='text'>Encontre professores que te auxiliem nos estudos nas disciplinas de sua escolha.</p>
-                        
+                            <p>Encontre um professor que te auxilie nos estudos nas disciplinas de sua escolha.</p>
 
-                        <div className='btn-wrapper'> 
-                            <button>Entrar</button>
+                            <div className='btn-wrapper'> 
+                                    <button>Entrar</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div className='rt-box'>
+                        
+                        <div className='wrap-content'>
+                                    <h1>Professor</h1>
+
+                                    <p>Contribua de forma voluntária no aprendizado de estudantes de todo o país.</p>
+
+                                    <div className='btn-wrapper'> 
+                                    <button>Entrar</button>
+                                </div>
+                         </div>
                         </div>
                     </div>
-                </div>
-
-                
-        
-                <div className='right-container'>
-                    
-                    <div className='wrapper'>
-                        
-                        <h1 className='title'>Professor</h1>
-
-                     
-                            <p className='text'>Contribua de forma voluntária no conhecimento de estudantes de todo o país.</p>
-                      
-                        
-                        
-                        <div className='btn-wrapper'> 
-                            <button>Entrar</button>
-                        </div>
-                    </div>
-                </div>
-                </section>
-            </main>
-
-            
-        </body>
+                    </main>
+            </body>
     )
 }
 

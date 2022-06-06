@@ -1,260 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 body {
-    background: #f8f8ff;
-    height: 100vh;
-    overflow: hidden;
+    background: #F8F8FF;
+    max-height: 100% !important;
 }
 
 header {
+    border: 1px solid black;
+    height: 20vh;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 15vh;
-    padding: 2rem;
-    
+    align-items: center;
 }
 
-/* header img {
-    width:  22.05vw;
-    height: 14.45vh;
-} */
-
-
-
-header h3 {
-    color: #597DA8;
-    font-family: 'Poppins', sans-serif;
+header h2 {
+    font-size: medium;
     text-align: center;
+    color: #04345C;
+    font-family: 'Quicksand';
+    font-weight: bold;
 }
 
 main {
-    height: 85%;
+    height: 80vh;
 }
-
-
-
-.main-section{
-    display: flex;
-    height: 100%;
-}
-
-.left-container, .right-container {
-    width: 50vw;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-
-
-
-.left-container:hover {
-    background: url(../assets/bg-student.svg) no-repeat center center #1B343B;
-    background-size: cover;
-    height: 100%;
-    transition: 0.3s ease-in-out;
-}
-
-.right-container:hover {
-    background: url(../assets/bg-teacher.svg) no-repeat center center #1B343B;
-    background-size: cover;
-    height: 100%;
-    transition: 0.3s ease-in-out;
-}
-
-.left-container:hover .title {
-    color: #f8f8ff;
-}                                   /* muda a cor dos titulos (aluno e professor) no hover das divs */
-
-.right-container:hover .title {
-    color: #f8f8ff;
-}   
-
-.left-container:hover .text {
-    color: #f8f8ff;
-}                           /* muda a cor dos parágrafos no hover das divs */
-
-.right-container:hover .text {
-    color: #f8f8ff;
-    
-}    
-
-.left-container:hover button {
-    color: #f8f8ff;
-    border: 2px solid #f8f8ff;
-    transition: 0.3s ease-in-out;
-}                                
-                            /* muda a cor dos botões no hover das divs */
-
-.right-container:hover button { 
-    color: #f8f8ff;
-    border: 1px solid #f8f8ff;
-    transition: 0.3s ease-in-out;
-}
-
-
 
 .wrapper {
+     height: 100%;
+}
+
+.lf-box, .rt-box {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lf-box {
+    background: url(../assets/bg-student.svg) no-repeat center center #04345C;
+    background-size: cover;
+}
+
+.rt-box {
+    background: url(../assets/bg-teacher.svg) no-repeat center center #1B343B;
+    background-size: cover;
+}
+
+.wrap-content {
+    color: #F8F8FF;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
 }
 
-.title {
-    margin: 0;    
-    font-family: 'Fredoka One', cursive;
-    text-transform: uppercase;
-    color: #597DA8;
-    letter-spacing: 1.5px;
-    font-weight: 300;
-}
-
-.text {
-    width: 85%;
-    margin-top: 4.5rem;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5vw;
+.wrap-content h1 {
+    margin: 0;
+    font-family: 'Quicksand';
+    font-size: x-large;
     text-align: center;
-    color: #597DA8;
-    font-weight: 600;
-} 
+    letter-spacing: 1px;
+}
+
+.wrap-content p {
+    font-size: 13px;
+    font-family: 'Quicksand';
+    font-weight: 500;
+    text-align: center;
+    margin-top: 2rem;
+    width: 70%;
+}
 
 .btn-wrapper {
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 4.5rem;
 }
 
 .btn-wrapper button {
-    width: 12rem;
-    padding: 0.8rem;
-    font-size: 16px;
+    width: 8rem;
+    padding: 0.5rem;
+    font-size: 14px;
     font-family: 'Poppins';
     font-weight: 600;
-    border: 2px solid #597DA8;
+    border: 1px solid #F8F8FF;
     border-radius: 2rem;
     background: none;
+    color: #F8F8FF;
     cursor: pointer;
-    color: #597DA8;
 }
-
-.btn-wrapper button:hover {
-    background-color: #f8f8ff;
-    color: #1b343b;
-}
-
-
-@media (max-width: 999px) {
-   
-
-    .left-container {
-        background: url(../assets/bg-student.svg) no-repeat center center #1B343B;
-        background-size: cover;
-        
-    }
-
-    .left-container:hover, .right-container:hover {
-        background-size: cover;
-        transition: none;
-    }
-
-    .left-container:hover button, .right-container:hover button {
-        color: #597DA8;
-        
-    }
-
-    .right-container {
-        background: url(../assets/bg-teacher.svg) no-repeat center center #1B343B;
-        background-size: cover;
-        
-    }
-
-    .title {
-        color: #f8f8ff;
-    }
-
-    .text {
-        color: #f8f8ff;
-        font-size: 1.85vw;
-    }
-
- .btn-wrapper button {
-        background: #f8f8ff;
-        color: #597DA8;
-        border: 2px solid #f8f8ff;
-    }
-
-    .btn-wrapper button:hover {
-        transition: none;
-        
-    }
-}
-
-
-
-@media (max-width: 768px) {
-
-    body {
-        overflow-y: scroll;
-    }
-
-    header h3 {
-        font-size: 20px;
-    }
-
-    header img {
-        width: 215px;
-        height: 67.41px;
-    }
-    
-    .main-section{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .left-container, .right-container {
-        display: block;
-        width: 100vw;
-        padding: 2rem;
-        color: #f8f8ff;
-    }
-
-   .text {
-        font-size: 17.8px;
-    }
-
-}
-
-@media (max-width: 520px) {
-
-    header img {
-        width: 200px;
-        height: 62.7px;
-    }
-
-    header h3 {
-        font-size: 15px;
-    }
-
-    .text {
-        font-size: 13.8px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
