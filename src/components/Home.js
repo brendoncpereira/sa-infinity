@@ -18,9 +18,10 @@ const Home = () => {
                             <div className='wrap-content'>
                            
                             <h1>Aluno</h1>
-
+                            
+                            <div className='p-container'>
                             <p>Encontre um professor que te auxilie nos estudos nas disciplinas de sua escolha.</p>
-
+                            </div>
                             <div className='btn-wrapper'> 
                                     <button>Entrar</button>
                                 </div>
@@ -32,9 +33,10 @@ const Home = () => {
                         
                         <div className='wrap-content'>
                                     <h1>Professor</h1>
-
+                                    <div className='p-container'>
                                     <p>Contribua de forma voluntária no aprendizado de estudantes de todo o país.</p>
-
+                                    </div>
+                                    
                                     <div className='btn-wrapper'> 
                                     <button>Entrar</button>
                                 </div>
