@@ -19,12 +19,12 @@ header img {
     margin-top: 16px;
 }
 
+
 header h2 {
-    font-size: medium;
+    font-size: 1em;
     text-align: center;
     color: #04345C;
     font-family: 'Quicksand';
-    font-weight: bold;
 }
 
 main {
@@ -62,6 +62,7 @@ main {
 
 .wrap-content h1 {
     margin: 0;
+    margin-top: 2rem;
     font-family: 'Quicksand';
     font-size: x-large;
     text-align: center;
@@ -73,7 +74,7 @@ main {
     justify-content: center;
     align-items: center;
     height: 10vh;
-    margin-top: 1rem;
+    margin-top: 2rem;
     width: 80%;
     
 }
@@ -86,7 +87,7 @@ main {
 }
 
 .btn-wrapper {
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,11 +119,15 @@ main {
     }
     
     header h2 {
-        font-size: larger;
+        font-size: 1.2em;
+    }
+
+    .wrap-content h1 {
+        margin-top: 3rem;
     }
     
     .p-container {
-        margin-top: 2rem;
+        margin-top: 3rem;
     }
 
     .p-container p {
@@ -131,7 +136,7 @@ main {
     }
         
     .btn-wrapper {
-        margin-top: 2rem;
+        margin-top: 3rem;
     }
 
     .btn-wrapper button {
@@ -153,9 +158,7 @@ main {
         height: 76px;
     }
     
-    header h2 {
-        font-size: 20px;
-    }
+    
 
     .wrapper {
         
@@ -169,24 +172,40 @@ main {
         height: 100%;
     }
 
-    .wrap-content p {
+    .wrap-content h1 {
         margin-top: 4rem;
-        
-        
+        font-size: 28px;
     }
+
+    .p-container {
+        margin-top: 4rem;
+    }
+
+    .p-container p {
+        
+        width: 85%;
+}
 
     .btn-wrapper {
         margin-top: 4rem;
     }
-
-    
 }
 
-/* 
-@media screen and (min-width: 769px) {
+
+@media screen and (min-width: 900px) {
+
+    header img {
+        width: 220px;
+        height: 92px;
+    }  
+    
+    
+    header h2 {
+        font-size: 1.5em;
+    }
+    
 
     .wrapper {
-        
         display: flex;
         justify-content: center;
         width: 100%;
@@ -196,11 +215,15 @@ main {
         width: 50%;
         height: 100%;
         background: none;
+        transition: 0.3s ease-out;
+        position: relative;
+        
     }
 
-    .lf-box:hover {
+  .lf-box:hover {
         background: url(../assets/bg-student.svg) no-repeat center center #04345C;
         background-size: cover;
+        transition: 0.3s ease-in-out;
     }
 
     .lf-box:hover .wrap-content,.rt-box:hover .wrap-content {
@@ -221,10 +244,38 @@ main {
         color: #04345C;
     }
 
+    .wrap-content h1 {
+        margin-top: 5rem;
+    }
+
+
+     .p-container {
+        width: 90%;
+        margin-top: 5rem;
+    }
+
+    .p-container p {
+        font-size: 20px;
+        
+    }
+
+    .btn-wrapper {
+        margin-top: 5rem;
+  } 
+
     .btn-wrapper button {
        color: #04345C;
        border: 1px solid #04345C;
        background: none;
+        width: 12rem;
+        padding: 0.8em;
+        font-size: 16px;
+        transition: 0.5s;
+}
 
-       
-} */
+.btn-wrapper button:hover {
+    background: #F8F8FF;
+    color: #04345C;
+    transition: 0.3s ease-in;
+}
+}

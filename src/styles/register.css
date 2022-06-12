@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body {
+    background: url(../assets/bg.png) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    height: 90%;
+    width: 90%;
+    border: 1px solid red;
+}
+
+.lf-box {
+    
+    
+}
+
+
+

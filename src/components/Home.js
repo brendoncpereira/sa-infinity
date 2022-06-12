@@ -8,7 +8,10 @@ const Home = () => {
                 <header>
                    <img src={logo}/>
 
+                
                    <h2>Escolha como você gostaria de se cadastrar.</h2>
+
+                
                 </header>
 
                 <main>
@@ -38,7 +41,7 @@ const Home = () => {
                                     </div>
                                     
                                     <div className='btn-wrapper'> 
-                                    <button>Entrar</button>
+                                    <button type='submit'>Entrar </button>
                                 </div>
                          </div>
                         </div>
