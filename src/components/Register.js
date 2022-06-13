@@ -28,20 +28,29 @@ import logoMQ from '../assets/logo-mq.svg';
                         <form className='input-wrapper'>
                             
                             <div className='input-box'>
-                                    <input type='text' name='first-name' placeholder='Nome'/>
+                                    
+                                    
+                                    <input type='text' name='first-name'/>
+                                    <label>Nome</label>
+                                    
                                 </div>
 
-                                <div>
-                                <input type='text' name='last-name' placeholder='Sobrenome'/>
-                                
-                                </div>
+                               
+
+                            <div className='input-box'>
+                                <input type='text' name='last-name' />
+                                <label>Sobrenome</label>
+                            </div>
+                               
                               
-                                <div>
-                                <input type='text' name='cpf' placeholder='Cpf'/>
+                                <div className='input-box'>
+                                <input type='number' name='cpf' />
+                                <label>CPF</label>
                                 </div>
 
-                                <div>
-                                <input type='text' name='bday-date' placeholder='Data nascimento'/>
+                                <div className='input-box'>
+                                <input type='date' name='bday-date'/>
+                                <label>Data de nascimento</label>
                                 </div>
 
                                 {/* <div>

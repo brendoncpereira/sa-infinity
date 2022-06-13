@@ -106,7 +106,25 @@ main {
     outline: none;
     font-size: 12px;
     font-family: 'Poppins';
+    
 }
+
+.input-box {
+    position: relative;
+}
+
+.input-box label {
+    left: 15px;
+    top: 0rem;
+    font-family: 'Poppins';
+    font-size: 13px;
+    position: absolute;
+}
+
+
+
+
+
 
 .login-rdr {
     
@@ -139,6 +157,8 @@ main {
     letter-spacing: 0.8px;
     border-radius: 1.1rem;
 }
+
+
 
 
 
