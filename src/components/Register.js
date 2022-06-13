@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/register.css';
 import illustration from '../assets/reglog-illustration.svg';
+import logoMQ from '../assets/logo-mq.svg';
 
  const Register = () => {
     return(
@@ -9,11 +10,65 @@ import illustration from '../assets/reglog-illustration.svg';
         <main>
             <div className="wrapper">
                 <div className="lf-box">
-                   
-                </div>
+   
+                    <p className='welcome-title'>We are <span>Infinity.</span> </p>
+            </div>
 
                 <div className="rt-box">
 
+                    <div className='container-title'>
+                        
+                    <p className='rt-title'>Vamos começar!</p>
+                    <p className='rt-subtitle'>Preencha os campos abaixo.</p>
+
+                    </div>
+                    
+                        
+
+                        <form className='input-wrapper'>
+                            
+                            <div className='input-box'>
+                                    <input type='text' name='first-name' placeholder='Nome'/>
+                                </div>
+
+                                <div>
+                                <input type='text' name='last-name' placeholder='Sobrenome'/>
+                                
+                                </div>
+                              
+                                <div>
+                                <input type='text' name='cpf' placeholder='Cpf'/>
+                                </div>
+
+                                <div>
+                                <input type='text' name='bday-date' placeholder='Data nascimento'/>
+                                </div>
+
+                                {/* <div>
+                                <input type='text' name='username' placeholder='Apelido'/>
+                                </div>
+
+                                <div>
+                                <input type='text' name='email' placeholder='Email'/>
+
+                                </div>
+
+                                 <div>
+                                <input type='text' name='password' placeholder='Senha'/>
+                                </div>
+
+                                <div>
+                                <input type='text' name='password-confirm' placeholder='Confirme senha'/>
+                                </div> */}
+    
+                        </form>
+
+                        <p className='login-rdr'>Já possui conta? Faça login.</p>
+
+                        <div className='btn-wrapper'>
+                            <button>Prosseguir</button>
+                        </div>
+                       
                         </div>
             </div>
         </main>
