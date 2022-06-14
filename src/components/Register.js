@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/register.css';
 import illustration from '../assets/reglog-illustration.svg';
 import logoMQ from '../assets/logo-mq.svg';
-import Typing from 'react-typing-animation';
+
 
  const Register = () => {
 
@@ -29,35 +29,39 @@ import Typing from 'react-typing-animation';
                         
 
                         <form className='input-wrapper'>
+
+                            <div className='input-box-wrapper'>
+
+                            
                             
                             <div className='input-box'>
-
-                               
-                                <input type='text' name='first-name'/>
-                                <label>Nome:</label>
-                                
-                                    
-                                </div>
+                                <label>Nome</label>
+                                <input type='text' name='first-name' placeholder='Nome'/>
+                            </div>
 
                                
 
-                            <div className='input-box'>
+                             <div className='input-box'>
+                             <label>Sobrenome:</label>
                                 <input type='text' name='last-name' />
-                                <label>Sobrenome:</label>
+                                
                             </div>
                                
                               
                                 <div className='input-box'>
-                                <input type='number' name='cpf' inputmode="numeric" />
                                 <label>CPF:</label>
+                                <input type='number' name='cpf' inputmode="numeric" />
+                                
                                 </div>
 
                                 <div className='input-box'>
-                                <input type='date' name='bday-date'/>
                                 <label>Data de nascimento:</label>
-                                </div>
+                                <input type='date' name='bday-date'/>
+                                
+                                </div> 
+                            </div>
 
-                                {/* <div>
+                                 {/* <div>
                                 <input type='text' name='username' placeholder='Apelido'/>
                                 </div>
 
@@ -72,11 +76,13 @@ import Typing from 'react-typing-animation';
 
                                 <div>
                                 <input type='text' name='password-confirm' placeholder='Confirme senha'/>
-                                </div> */}
+                                </div>  */}
     
                         </form>
-
-                        <p className='login-rdr'>Já possui conta? Faça login.</p>
+                        
+                        <div className='go-login-box'>
+                        <p className='go-login'>Já possui conta? Faça login.</p>
+                        </div>
 
                         <div className='btn-wrapper'>
                             <button>Prosseguir</button>

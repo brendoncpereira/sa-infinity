@@ -63,12 +63,10 @@ main {
 }
 
 .container-title {
-    width: 13rem;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+   
+    
+    width: 90%;
+    
     
 }
 
@@ -83,9 +81,67 @@ main {
     text-align: center;
     font-family: 'Poppins';
     font-size: 14px;
+    
 }
 
 .input-wrapper {
+    
+    
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.input-box {
+    margin: 1rem;
+    display: flex;
+    
+    flex-direction: column;
+    
+}
+
+.input-box label {
+    font-size: 13px;
+    font-family: 'Poppins';
+}
+
+.input-box input {
+    margin: 4px 0 4px 0;
+    font-family: 'Poppins';
+    font-size: 12px;
+    width: 14rem;
+    padding: 0.5rem;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+
+
+.go-login {
+    font-family: 'Poppins';
+    font-size: 12px;
+}
+
+
+
+.btn-wrapper button {
+    width: 12rem;
+    padding: 0.8rem;
+    background: #04345c;
+    border: none ;
+    color: #F8F8FF;
+    font-size: 14px;
+    font-family: 'Quicksand';
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border-radius: 2rem;
+}
+
+/* .input-wrapper {
    
     display: flex;
     align-items: center;
@@ -116,49 +172,19 @@ main {
 }
 
 .input-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 13rem;
+   
     
 }
-
 
 .input-box label {
-    position: absolute;
-    font-family: 'Poppins';
-    font-size: 13px;
-    align-self: flex-start;
-    top: 18px;
-    transition:  0.2s ease-in-out;
-}
-
- input:focus + label{
-    transform: translateY(-5px);
-    font-size: 12px;
     
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input[type=number]{
-    -moz-appearance: textfield;
-}
+} */
 
 
 
 
 
-
-
-
-.login-rdr {
+/* .login-rdr {
     
     font-family: 'Poppins';
     font-size: 12px;
@@ -186,4 +212,4 @@ input[type=number]{
     text-transform: uppercase;
     letter-spacing: 0.8px;
     border-radius: 2rem;
-}
+} */
