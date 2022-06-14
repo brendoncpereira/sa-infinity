@@ -109,6 +109,8 @@ main {
     outline: none;
     font-size: 12px;
     font-family: 'Poppins';
+    box-shadow: none;
+    -webkit-box-shadow: none;
    
     
 }
