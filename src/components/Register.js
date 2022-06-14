@@ -2,15 +2,18 @@ import React from 'react';
 import '../styles/register.css';
 import illustration from '../assets/reglog-illustration.svg';
 import logoMQ from '../assets/logo-mq.svg';
+import Typing from 'react-typing-animation';
 
  const Register = () => {
+
+    
     return(
         <body>
 
         <main>
             <div className="wrapper">
                 <div className="lf-box">
-   
+                    
                     <p className='welcome-title'>We are <span>Infinity.</span> </p>
             </div>
 
@@ -28,10 +31,11 @@ import logoMQ from '../assets/logo-mq.svg';
                         <form className='input-wrapper'>
                             
                             <div className='input-box'>
-                                    
-                                    
-                                    <input type='text' name='first-name'/>
-                                    <label>Nome</label>
+
+                               
+                                <input type='text' name='first-name'/>
+                                <label>Nome:</label>
+                                
                                     
                                 </div>
 
@@ -39,18 +43,18 @@ import logoMQ from '../assets/logo-mq.svg';
 
                             <div className='input-box'>
                                 <input type='text' name='last-name' />
-                                <label>Sobrenome</label>
+                                <label>Sobrenome:</label>
                             </div>
                                
                               
                                 <div className='input-box'>
-                                <input type='number' name='cpf' />
-                                <label>CPF</label>
+                                <input type='number' name='cpf' inputmode="numeric" />
+                                <label>CPF:</label>
                                 </div>
 
                                 <div className='input-box'>
                                 <input type='date' name='bday-date'/>
-                                <label>Data de nascimento</label>
+                                <label>Data de nascimento:</label>
                                 </div>
 
                                 {/* <div>
@@ -87,4 +91,3 @@ import logoMQ from '../assets/logo-mq.svg';
 }
 
 export default Register;
-

@@ -17,7 +17,6 @@ main {
 .wrapper {
     height: 100%;
     width: 100%;
-    background: red;
 }
 
 .lf-box {
@@ -64,8 +63,8 @@ main {
 }
 
 .container-title {
-    
-   
+    width: 13rem;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,7 +86,7 @@ main {
 }
 
 .input-wrapper {
-    margin-top: 1rem;
+   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,30 +95,60 @@ main {
     
 }
 
+
+
+
 .input-wrapper input {
     border: none;
     border-bottom: 1px solid black;
     background: none;
-    width: 15rem;
+    width: 100%;
     margin: 1rem;
-    padding: 0.5rem 0px 0.5rem 0px;
+    padding: 2rem 0px 0px 0px;
     outline: none;
     font-size: 12px;
     font-family: 'Poppins';
+   
     
 }
 
 .input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
+    width: 13rem;
+    
 }
 
+
 .input-box label {
-    left: 15px;
-    top: 0rem;
+    position: absolute;
     font-family: 'Poppins';
     font-size: 13px;
-    position: absolute;
+    align-self: flex-start;
+    top: 18px;
+    transition:  0.2s ease-in-out;
 }
+
+ input:focus + label, input:not(:placeholder-shown){
+    transform: translateY(-5px);
+    font-size: 12px;
+    
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+
 
 
 
@@ -136,8 +165,6 @@ main {
 
 
 .btn-wrapper {
-    margin-top: 1rem;
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,7 +173,7 @@ main {
 
 .btn-wrapper button {
     width: 12rem;
-    padding: 0.6rem;
+    padding: 0.8rem;
     background: #04345c;
     border: none;
     color: #F8F8FF;
@@ -155,10 +182,5 @@ main {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    border-radius: 1.1rem;
+    border-radius: 2rem;
 }
-
-
-
-
-
