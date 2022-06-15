@@ -63,11 +63,7 @@ main {
 }
 
 .container-title {
-   
-    
-    width: 90%;
-    
-    
+   width: 90%;
 }
 
 .rt-title {
@@ -81,25 +77,22 @@ main {
     text-align: center;
     font-family: 'Poppins';
     font-size: 14px;
-    
+    margin: 0;
 }
 
 .input-wrapper {
-    
-    
     width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 1rem 0 0 0;
 }
 
 
 .input-box {
     margin: 1rem;
     display: flex;
-    
     flex-direction: column;
-    
 }
 
 .input-box label {
@@ -108,15 +101,42 @@ main {
 }
 
 .input-box input {
-    margin: 4px 0 4px 0;
+    margin: 10px 0 10px 0;
     font-family: 'Poppins';
     font-size: 12px;
-    width: 15rem;
-    padding: 0.5rem;
+    width: 12rem;
+    padding: 12px 40px;
     outline: none;
-    border: 1px solid gray;
-    border-radius: 5px;
+    border: 1px solid #d3d3d3;
+    background: transparent;
+    border-radius: 0.3rem;
 }
+
+.input-icon-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.input-icon-box span {
+    right: 0;
+    margin: 0 auto;
+    top: 55px;
+    font-family: 'Poppins';
+    position: absolute;
+    font-size: 11px;
+    color: red;
+}
+
+.input-icon-box .span {
+    position: absolute;
+    padding: 12px;
+    color: #04345c;   
+}
+
+
+
+
 
 
 
@@ -127,7 +147,8 @@ main {
 
 
 
-.btn-wrapper button {
+ button {
+    margin: 1rem;
     width: 12rem;
     padding: 0.8rem;
     background: #04345c;
@@ -141,75 +162,17 @@ main {
     border-radius: 2rem;
 }
 
-/* .input-wrapper {
-   
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
     
 }
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
 
-
-
-
-.input-wrapper input {
-    border: none;
-    border-radius: none;
-    border-bottom: 1px solid black;
-    background: none;
-    width: 100%;
-    margin: 1rem;
-    padding: 2rem 0px 0px 0px;
-    outline: none;
-    font-size: 12px;
-    font-family: 'Poppins';
-    box-shadow: none;
-    -webkit-box-shadow: none;
-   
-    
 }
 
-.input-box {
-   
-    
+input[type='date'], input[type='time'] {
+    -webkit-appearance: none;
 }
 
-.input-box label {
-    
-} */
-
-
-
-
-
-/* .login-rdr {
-    
-    font-family: 'Poppins';
-    font-size: 12px;
-}
-
-
-
-
-.btn-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.btn-wrapper button {
-    width: 12rem;
-    padding: 0.8rem;
-    background: #04345c;
-    border: none;
-    color: #F8F8FF;
-    font-size: 14px;
-    font-family: 'Quicksand';
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    border-radius: 2rem;
-} */
