@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/register.css';
-import illustration from '../assets/reglog-illustration.svg';
-import InputMask from 'react-input-mask';
+import illustration from '../assets/illustration-register.png';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faIdCard } from '@fortawesome/free-solid-svg-icons';
@@ -10,6 +10,7 @@ import { faCalendarMinus } from '@fortawesome/free-solid-svg-icons';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
+import { logDOM } from '@testing-library/react';
 
 const cpfNumbVal = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
@@ -45,8 +46,9 @@ const Register = (props) => {
             <main>
                 <div className="wrapper">
                     <div className="lf-box">
-
-                        <p className='welcome-title'>We are <span>Infinity.</span> </p>
+                    <p className='welcome-title'>We are <span>Infinity.</span> </p>
+                        <img src={illustration}/>
+                        <p className='subtitle'>Infinity</p> 
                     </div>
 
                     <div className="rt-box">
@@ -125,22 +127,7 @@ const Register = (props) => {
                                 </div>
                             </div>
 
-                            {/* <div>
-                                <input type='text' name='username' placeholder='Apelido'/>
-                                </div>
-
-                                <div>
-                                <input type='text' name='email' placeholder='Email'/>
-
-                                </div>
-
-                                 <div>
-                                <input type='text' name='password' placeholder='Senha'/>
-                                </div>
-
-                                <div>
-                                <input type='text' name='password-confirm' placeholder='Confirme senha'/>
-                                </div>  */}
+                            
                             <div className='btn-wrapper'>
                                 <button type='submit'>Continuar</button>
                             </div>
