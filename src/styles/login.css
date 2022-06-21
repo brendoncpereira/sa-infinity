@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body {
+    background: rgb(4,52,92);
+    background: radial-gradient(circle, rgba(4,52,92,1) 0%, rgba(248,248,255,1) 100%);
+    height: 100vh;
+    
+}
+
+main {
+    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    
+    height: 90%;
+    width: 70%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lf-box {
+    width: 50%;
+    height: 90%;
+    background: url(../assets/bg.png) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.lf-box img {
+    width: 320px;
+    height: 320px;
+}
+
+
+.welcome-title {
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-weight: 200;
+    color: #F8F8FF;
+    text-align: center;
+    margin: 2rem 0px 0px 0px;
+    font-style: italic;
+    word-spacing: 2px;
+}
+
+.welcome-title span {
+    text-transform: uppercase;
+    font-family: 'Quicksand';
+    font-weight: 600;
+    font-size: 26px;
+    font-style: normal;
+    letter-spacing: 2px;
+    display: none;
+    
+}
+
+.subtitle {
+    text-transform: uppercase;
+    font-family: 'Quicksand';
+    font-weight: 600;
+    font-size: 28px;
+    color: #F8F8FF;
+    letter-spacing: 2px;
+}
+
+
+
+.rt-box {
+    width: 50%;
+    height: 90%;
+    background: #F8F8FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+
+.container-title {
+   width: 90%;
+   color: #111;
+   margin-bottom: 3.5rem;
+}
+
+.rt-title {
+    margin: 0;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 20px;
+}
+
+.rt-subtitle {
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 14px;
+    margin: 0.3rem 0px;
+}
+
+.input-wrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.input-box {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.input-box input {
+    
+    font-family: 'Poppins';
+    font-size: 12px;
+    width: 12rem;
+    padding: 8px 40px;
+    outline: none;
+    border: 1px solid #04345c;
+    background: transparent;
+    border-radius: 0.3rem;
+}
+
+.input-icon-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.input-icon-box span {
+    right: 0;
+    margin: 0 auto;
+    top: 40px;
+    font-family: 'Poppins';
+    position: absolute;
+    font-size: 11.2px;
+    color: red;
+}
+
+.input-icon-box .span {
+    position: absolute;
+    padding: 12px;
+    color: #04345c;   
+}
+
+
+
+
+
+
+
+.go-login {
+    font-family: 'Poppins';
+    font-size: 12px;
+    margin-top: 1.2rem;
+}
+
+
+
+ button {
+    margin-top: 3.5rem;
+    width: 12rem;
+    padding: 0.8rem;
+    background: #04345c;
+    border: none ;
+    color: #F8F8FF;
+    font-size: 16px;
+    font-family: 'Quicksand';
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover {
+    background: #597DA8;
+    transition: 0.2s ease-in-out;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+input[type='date'], input[type='time'] {
+    -webkit-appearance: none;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .welcome-title {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 26px;
+    }
+
+    .lf-box img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .input-box input {
+        width: 10rem;
+    }
+
+    button {
+        width: 11rem;
+        font-size: 14px;
+    }
+
+    .input-icon-box span {
+        font-size: 11px;
+    }
+
+    
+}
+
+@media screen and (max-width: 850px) {
+    .input-box input {
+        width: 8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .lf-box {
+        width: 100%;
+        display: none;
+    }
+
+
+    .rt-box {
+        width: 100%;
+        height: 100%;
+    }
+
+    .rt-title {
+        font-size: 24px;
+    }
+
+    .rt-subtitle {
+        font-size: 18px;
+    }
+
+    .input-box input {
+        width: 24rem;
+        font-size: 13px;
+    }
+
+    .input-box label {
+        font-size: 14px;
+    }
+
+    .input-icon-box span {
+        font-size: 12px;
+    }
+
+
+    button {
+        width: 16rem;
+        font-size: 16.5px;
+    }
+
+    .go-login {
+       
+        font-size: 14px;
+    }
+
+    @media screen and (max-width: 525px) {
+
+        .rt-title {
+            font-size: 22px;
+        }
+
+        .rt-subtitle {
+            font-size: 16px;
+        }
+
+        .input-box input {
+            width: 16rem;
+        }
+
+        button {
+            width: 14rem;
+            font-size: 14px;
+        }
+    }
+
+   
+
+    @media screen and (max-width: 425px) {
+
+        .input-box input {
+            width: 12rem;
+        }
+
+        button {
+            width: 12rem;
+        }
+
+        .go-login {
+       
+            font-size: 13px;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+
+        .input-box input {
+            width: 10rem;
+        }
+
+        
+    }
+
+
+    
+   
+
+    
+   
+}

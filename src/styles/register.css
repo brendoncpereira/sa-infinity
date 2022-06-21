@@ -28,7 +28,7 @@ main {
 
 .lf-box {
     width: 50%;
-    height: 100%;
+    height: 90%;
     background: url(../assets/bg.png) no-repeat center center;
     background-size: cover;
     display: flex;
@@ -79,19 +79,19 @@ main {
 
 .rt-box {
     width: 50%;
-    height: 100%;
+    height: 90%;
     background: #F8F8FF;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(0deg, rgba(4,52,92,1) 0%, rgba(248,248,255,1) 5%);
+   
     
 }
 
 .container-title {
    width: 90%;
-   
+   color: #111;
 }
 
 .rt-title {
@@ -118,7 +118,8 @@ main {
 
 
 .input-box {
-   
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
 }
@@ -136,7 +137,7 @@ main {
     width: 12rem;
     padding: 8px 40px;
     outline: none;
-    border: 1px solid #d3d3d3;
+    border: 1px solid #04345c;
     background: transparent;
     border-radius: 0.3rem;
 }
@@ -153,7 +154,7 @@ main {
     top: 40px;
     font-family: 'Poppins';
     position: absolute;
-    font-size: 12px;
+    font-size: 11.2px;
     color: red;
 }
 
@@ -177,7 +178,7 @@ main {
 
 
  button {
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 12rem;
     padding: 0.8rem;
     background: #04345c;
@@ -212,7 +213,7 @@ input[type='date'], input[type='time'] {
     -webkit-appearance: none;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1024px) {
 
     .welcome-title {
         font-size: 22px;

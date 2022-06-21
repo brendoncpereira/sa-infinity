@@ -4,8 +4,8 @@ import illustration from '../assets/illustration-register.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { faIdCard } from '@fortawesome/free-solid-svg-icons';
-import { faCalendarMinus } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faLock } from '@fortawesome/free-solid-svg-icons';
 
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -69,11 +69,11 @@ const Register = (props) => {
 
 
                                 <div className='input-box'>
-                                    <label>Nome:</label>
+                                   
 
                                     <div className='input-icon-box'>
                                         <FontAwesomeIcon className='span' icon={faUser} />
-                                        <input type='text' name='first-name' placeholder='ex: João' {...register("firstName", { required: true })} />
+                                        <input type='text' name='first-name' placeholder='Nome' {...register("firstName", { required: true })} />
 
                                         {errors.firstName && <span>Campo obrigatório</span>}
 
@@ -85,11 +85,11 @@ const Register = (props) => {
 
 
                                 <div className='input-box'>
-                                    <label>Sobrenome:</label>
+                                   
 
                                     <div className='input-icon-box'>
                                         <FontAwesomeIcon className='span' icon={faUser} />
-                                        <input type='text' name='last-name' placeholder='ex: Clayton' {...register("lastName", { required: true } )} />
+                                        <input type='text' name='last-name' placeholder='Sobrenome' {...register("lastName", { required: true } )} />
                                         {errors.lastName && <span>Campo obrigatório</span>}
         
                                     </div>
@@ -98,11 +98,10 @@ const Register = (props) => {
 
 
                                 <div className='input-box'>
-                                    <label>CPF:</label>
-
+                                    
                                     <div className='input-icon-box'>
-                                        <FontAwesomeIcon className='span' icon={faIdCard} />
-                                        <input type='text' placeholder='ex: 99999999999' maxLength={11} {...register("cpf", { required: true })}/>
+                                        <FontAwesomeIcon className='span' icon={faEnvelope} />
+                                        <input type='text' placeholder='Email'   {...register("cpf", { required: true })}/>
                                         {errors.cpf && <span>Campo obrigatório</span>}
                                     </div>
 
@@ -113,23 +112,32 @@ const Register = (props) => {
                                 </div>
 
                                 <div className='input-box'>
-                                    <label>Data de nascimento:</label>
-
+                                  
                                     <div className='input-icon-box'>
-                                        <FontAwesomeIcon className='span' icon={faCalendarMinus} />
+                                        <FontAwesomeIcon className='span' icon={faLock} />
 
-                                        <input type='date' {...register("date", { required: true })}/>
+                                        <input type='password' placeholder='Senha' {...register("date", { required: true })}/>
                                         {errors.date && <span>Campo obrigatório</span>}
                                     </div>
 
+                                    </div>
 
+                                <div className='input-box'>
+                                   
 
-                                </div>
+                                    <div className='input-icon-box'>
+                                        <FontAwesomeIcon className='span' icon={faLock} />
+
+                                        <input type='password' placeholder='Confirme sua senha' {...register("date", { required: true })}/>
+                                        {errors.date && <span>Campo obrigatório</span>}
+                                    </div>
+
+                                    </div>
                             </div>
 
                             
                             <div className='btn-wrapper'>
-                                <button type='submit'>Continuar</button>
+                                <button type='submit'>Cadastrar</button>
                             </div>
 
                         </form>
