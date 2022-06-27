@@ -2,6 +2,10 @@ import React from 'react';
 import '../styles/home.css';
 import logo from '../assets/logo.svg';
 
+
+
+
+
 const Home = () => {
     return(
             <body>
@@ -26,7 +30,9 @@ const Home = () => {
                             <p>Encontre um professor que te auxilie nos estudos nas disciplinas de sua escolha.</p>
                             </div>
                             <div className='btn-wrapper'> 
-                                    <button>Entrar</button>
+                                    <button id='button' onClick={() => {
+                                        
+                                    }}>Entrar</button>
                                 </div>
                                 
                             </div>
@@ -41,7 +47,12 @@ const Home = () => {
                                     </div>
                                     
                                     <div className='btn-wrapper'> 
-                                    <button type='submit'>Entrar </button>
+                                    
+                                    
+                                    <button> Entrar </button>
+                                   
+                                    
+                                    
                                 </div>
                          </div>
                         </div>
@@ -52,3 +63,4 @@ const Home = () => {
 }
 
 export default Home
+

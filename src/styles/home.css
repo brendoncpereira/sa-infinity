@@ -17,7 +17,10 @@ header {
 
 header img {
     margin-top: 16px;
+    
 }
+
+
 
 
 header h2 {
@@ -66,7 +69,7 @@ main {
     font-family: 'Quicksand';
     font-size: x-large;
     text-align: center;
-    letter-spacing: 1px;
+    letter-spacing: 1px; 
 }
 
 .p-container {

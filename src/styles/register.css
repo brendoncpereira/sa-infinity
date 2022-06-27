@@ -41,7 +41,24 @@ main {
 .lf-box img {
     width: 320px;
     height: 320px;
+    transform: translateY(0px);
+    animation: float 5s ease-in-out infinite;
 }
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 
 
 .welcome-title {
@@ -154,8 +171,10 @@ main {
     top: 40px;
     font-family: 'Poppins';
     position: absolute;
-    font-size: 11.2px;
+    font-size: 11px;
     color: red;
+    width: 100%;
+    
 }
 
 .input-icon-box .span {
@@ -228,6 +247,13 @@ input[type='date'], input[type='time'] {
         height: 300px;
     }
 
+    .input-box {
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+        
+    }
+    
+
     .input-box input {
         width: 10rem;
     }
@@ -238,7 +264,7 @@ input[type='date'], input[type='time'] {
     }
 
     .input-icon-box span {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     
@@ -248,6 +274,8 @@ input[type='date'], input[type='time'] {
     .input-box input {
         width: 8rem;
     }
+
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -265,6 +293,7 @@ input[type='date'], input[type='time'] {
 
     .rt-box {
         width: 100%;
+        height: 100%;
     }
 
     .rt-title {
@@ -335,6 +364,10 @@ input[type='date'], input[type='time'] {
        
             font-size: 13px;
         }
+
+        .input-box span {
+            font-size: 11px;
+        }
     }
 
     @media screen and (max-width: 320px) {
@@ -343,9 +376,14 @@ input[type='date'], input[type='time'] {
             width: 10rem;
         }
 
+        .input-box span {
+            font-size: 9.8px;
+        }
+
         
     }
 
+    
 
     
    

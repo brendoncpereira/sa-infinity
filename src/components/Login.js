@@ -11,13 +11,10 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 
 
-const cpfNumbVal = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
 const schema = yup.object({
-    firstName: yup.string().required(),
-    lastName: yup.string().required(),
-    cpf: yup.string().min(11).matches(cpfNumbVal, 'Cpf inválido').required(),
-    date: yup.string().min(10).required()
+    email: yup.string().email('Email ou senha inválidos!').required('Email ou senha inválidos!'),
+    password: yup.string().required('Email ou senha inválidos!'),
     
   }).required();
 
@@ -25,7 +22,8 @@ const schema = yup.object({
 const Login = (props) => {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm({
-        resolver: yupResolver(schema)
+        resolver: yupResolver(schema),
+        mode: 'onChange'       
         
        
       });
@@ -70,8 +68,8 @@ const Login = (props) => {
                                     
                                     <div className='input-icon-box'>
                                         <FontAwesomeIcon className='span' icon={faEnvelope} />
-                                        <input type='text' placeholder='Email'   {...register("cpf", { required: true })}/>
-                                        {errors.cpf && <span>Campo obrigatório</span>}
+                                        <input type='text' placeholder='*Email:'   {...register("email", { required: true })} style={{ border: errors.email?.message ? '1px solid red' : '' }} />
+                                        <span>{errors.email?.message}</span>
                                     </div>
 
 
@@ -85,8 +83,8 @@ const Login = (props) => {
                                     <div className='input-icon-box'>
                                         <FontAwesomeIcon className='span' icon={faLock} />
 
-                                        <input type='password' placeholder='Senha' {...register("date", { required: true })}/>
-                                        {errors.date && <span>Campo obrigatório</span>}
+                                        <input type='password' placeholder='*Senha:' {...register("password", { required: true })} style={{ border: errors.password?.message ? '1px solid red' : '' }} />
+                                         <span>{errors.password?.message}</span>
                                     </div>
 
                                     </div>
@@ -96,7 +94,7 @@ const Login = (props) => {
 
                             
                             <div className='btn-wrapper'>
-                                <button type='submit'>Cadastrar</button>
+                                <button type='submit'>Logar</button>
                             </div>
 
                         </form>

@@ -12,13 +12,13 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { logDOM } from '@testing-library/react';
 
-const cpfNumbVal = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
 const schema = yup.object({
-    firstName: yup.string().required(),
-    lastName: yup.string().required(),
-    cpf: yup.string().min(11).matches(cpfNumbVal, 'Cpf inválido').required(),
-    date: yup.string().min(10).required()
+    firstName: yup.string().required('Campo obrigatório!'),
+    lastName: yup.string().required('Campo obrigatório!'),
+    email: yup.string().email('O email inserido é inválido!').required('Campo obrigatório!'),
+    password: yup.string().min(8, 'A senha deve conter pelo menos oito caracteres!').required('Campo obrigatório!'),
+    confirmPassword: yup.string().oneOf([yup.ref('password')], 'As senhas não coincidem!').required('Campo obrigatório')
     
   }).required();
 
@@ -26,7 +26,8 @@ const schema = yup.object({
 const Register = (props) => {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm({
-        resolver: yupResolver(schema)
+        resolver: yupResolver(schema),
+        mode: 'onChange'
         
        
       });
@@ -73,9 +74,9 @@ const Register = (props) => {
 
                                     <div className='input-icon-box'>
                                         <FontAwesomeIcon className='span' icon={faUser} />
-                                        <input type='text' name='first-name' placeholder='Nome' {...register("firstName", { required: true })} />
+                                        <input type='text' name='first-name' placeholder='Nome' {...register("firstName", { required: true })} style={{ border: errors.firstName?.message ? '1px solid red' : '' }} />
 
-                                        {errors.firstName && <span>Campo obrigatório</span>}
+                                        { <span>{errors.firstName?.message}</span>}
 
                                     </div>
 
@@ -89,8 +90,8 @@ const Register = (props) => {
 
                                     <div className='input-icon-box'>
                                         <FontAwesomeIcon className='span' icon={faUser} />
-                                        <input type='text' name='last-name' placeholder='Sobrenome' {...register("lastName", { required: true } )} />
-                                        {errors.lastName && <span>Campo obrigatório</span>}
+                                        <input type='text' name='last-name' placeholder='Sobrenome' {...register("lastName", { required: true } )} style={{ border: errors.lastName?.message ? '1px solid red' : '' }} />
+                                         <span>{errors.lastName?.message}</span>
         
                                     </div>
 
@@ -101,8 +102,8 @@ const Register = (props) => {
                                     
                                     <div className='input-icon-box'>
                                         <FontAwesomeIcon className='span' icon={faEnvelope} />
-                                        <input type='text' placeholder='Email'   {...register("cpf", { required: true })}/>
-                                        {errors.cpf && <span>Campo obrigatório</span>}
+                                        <input type='text' placeholder='Email'   {...register("email", { required: true })} style={{ border: errors.email?.message ? '1px solid red' : '' }} />
+                                         <span>{errors.email?.message}</span>
                                     </div>
 
 
@@ -116,8 +117,8 @@ const Register = (props) => {
                                     <div className='input-icon-box'>
                                         <FontAwesomeIcon className='span' icon={faLock} />
 
-                                        <input type='password' placeholder='Senha' {...register("date", { required: true })}/>
-                                        {errors.date && <span>Campo obrigatório</span>}
+                                        <input type='password' placeholder='Senha' {...register("password", { required: true })} style={{ border: errors.password?.message ? '1px solid red' : '' }} />
+                                          <span>{errors.password?.message}</span>
                                     </div>
 
                                     </div>
@@ -128,8 +129,8 @@ const Register = (props) => {
                                     <div className='input-icon-box'>
                                         <FontAwesomeIcon className='span' icon={faLock} />
 
-                                        <input type='password' placeholder='Confirme sua senha' {...register("date", { required: true })}/>
-                                        {errors.date && <span>Campo obrigatório</span>}
+                                        <input type='password' placeholder='Confirme sua senha' {...register("confirmPassword", { required: true })} style={{ border: errors.confirmPassword?.message ? '1px solid red' : '' }} />
+                                         <span>{errors.confirmPassword?.message}</span>
                                     </div>
 
                                     </div>
