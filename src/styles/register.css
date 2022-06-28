@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-body {
-    background: rgb(4,52,92);
-    background: radial-gradient(circle, rgba(4,52,92,1) 0%, rgba(248,248,255,1) 100%);
+.body-reglog {
+   
+    background: #597DA8;
     height: 100vh;
     
 }
 
-main {
+.main-reglog {
     
     width: 100%;
     height: 100%;
@@ -16,17 +16,15 @@ main {
     justify-content: center;
 }
 
-.wrapper {
-    
+.wrapper-reglog {
     height: 90%;
     width: 70%;
-    
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.lf-box {
+.lf-box-reglog {
     width: 50%;
     height: 90%;
     background: url(../assets/bg.png) no-repeat center center;
@@ -35,10 +33,11 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
 }
 
-.lf-box img {
+.lf-box-reglog img {
     width: 320px;
     height: 320px;
     transform: translateY(0px);
@@ -61,7 +60,7 @@ main {
 
 
 
-.welcome-title {
+.welcome-title-reglog {
     font-family: 'Poppins';
     font-size: 24px;
     font-weight: 200;
@@ -72,7 +71,7 @@ main {
     word-spacing: 2px;
 }
 
-.welcome-title span {
+.welcome-title-reglog span {
     text-transform: uppercase;
     font-family: 'Quicksand';
     font-weight: 600;
@@ -83,7 +82,7 @@ main {
     
 }
 
-.subtitle {
+.subtitle-reglog {
     text-transform: uppercase;
     font-family: 'Quicksand';
     font-weight: 600;
@@ -94,7 +93,7 @@ main {
 
 
 
-.rt-box {
+.rt-box-reglog {
     width: 50%;
     height: 90%;
     background: #F8F8FF;
@@ -102,30 +101,31 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-   
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
     
 }
 
-.container-title {
-   width: 90%;
-   color: #111;
+.container-title-reglog {
+    width: 90%;
+    color: #111;
 }
 
-.rt-title {
+.rt-title-reglog {
     margin: 0;
     text-align: center;
     font-family: 'Poppins';
     font-size: 20px;
 }
 
-.rt-subtitle {
+.rt-subtitle-reglog {
     text-align: center;
     font-family: 'Poppins';
     font-size: 14px;
     margin: 0.3rem 0px;
 }
 
-.input-wrapper {
+.input-wrapper-reglog {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -134,20 +134,20 @@ main {
 }
 
 
-.input-box {
+.input-box-reglog {
     padding-top: 1rem;
     padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
 }
 
-.input-box label {
+.input-box-reglog label {
     font-size: 13px;
     font-family: 'Poppins';
     margin-top: 1rem;
 }
 
-.input-box input {
+.input-box-reglog input {
     
     font-family: 'Poppins';
     font-size: 12px;
@@ -159,13 +159,13 @@ main {
     border-radius: 0.3rem;
 }
 
-.input-icon-box {
+.input-icon-box-reglog {
     display: flex;
     align-items: center;
     position: relative;
 }
 
-.input-icon-box span {
+.input-icon-box-reglog span {
     right: 0;
     margin: 0 auto;
     top: 40px;
@@ -177,26 +177,29 @@ main {
     
 }
 
-.input-icon-box .span {
+.input-icon-box-reglog .span {
     position: absolute;
     padding: 12px;
     color: #04345c;   
 }
-
-
-
-
-
-
 
 .go-login {
     font-family: 'Poppins';
     font-size: 12px;
 }
 
+.go-login span {
+    color: blue;
+    cursor: pointer;
+}
+
+.go-login span:hover {
+    text-decoration: underline;
+}
 
 
- button {
+
+ .btn-wrapper-reglog button {
     margin-top: 1rem;
     width: 12rem;
     padding: 0.8rem;
@@ -213,57 +216,57 @@ main {
     transition: 0.2s ease-in-out;
 }
 
-button:hover {
+.btm-wrapper-reglog button:hover {
     background: #597DA8;
     transition: 0.2s ease-in-out;
 }
 
-input[type=number]::-webkit-inner-spin-button { 
+.input-box-reglog input[type=number]::-webkit-inner-spin-button { 
     -webkit-appearance: none;
     
 }
-input[type=number] { 
+.input-box-reglog input[type=number] { 
    -moz-appearance: textfield;
    appearance: textfield;
 
 }
 
-input[type='date'], input[type='time'] {
+.input-box-reglog  input[type='date'], input[type='time'] {
     -webkit-appearance: none;
 }
 
 @media screen and (max-width: 1024px) {
 
-    .welcome-title {
+    .welcome-title-reglog {
         font-size: 22px;
     }
 
-    .subtitle {
+    .subtitle-reglog {
         font-size: 26px;
     }
 
-    .lf-box img {
+    .lf-box-reglog img {
         width: 300px;
         height: 300px;
     }
 
-    .input-box {
-        padding-top: 1.2rem;
-        padding-bottom: 1.2rem;
+    .input-box-reglog {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
         
     }
     
 
-    .input-box input {
+    .input-box-reglog input {
         width: 10rem;
     }
 
-    button {
+    .btn-wrapper-reglog button {
         width: 11rem;
         font-size: 14px;
     }
 
-    .input-icon-box span {
+    .input-icon-box-reglog span {
         font-size: 10px;
     }
 
@@ -271,7 +274,7 @@ input[type='date'], input[type='time'] {
 }
 
 @media screen and (max-width: 850px) {
-    .input-box input {
+    .input-box-reglog input {
         width: 8rem;
     }
 
@@ -279,46 +282,46 @@ input[type='date'], input[type='time'] {
 }
 
 @media screen and (max-width: 768px) {
-    .wrapper {
+    .wrapper-reglog {
         flex-direction: column;
         width: 100%;
         height: 100%;
     }
 
-    .lf-box {
+    .lf-box-reglog {
         width: 100%;
         display: none;
     }
 
 
-    .rt-box {
+    .rt-box-reglog {
         width: 100%;
         height: 100%;
     }
 
-    .rt-title {
+    .rt-title-reglog {
         font-size: 24px;
     }
 
-    .rt-subtitle {
+    .rt-subtitle-reglog {
         font-size: 18px;
     }
 
-    .input-box input {
+    .input-box-reglog input {
         width: 24rem;
         font-size: 13px;
     }
 
-    .input-box label {
+    .input-box-reglog label {
         font-size: 14px;
     }
 
-    .input-icon-box span {
+    .input-icon-box-reglog span {
         font-size: 12px;
     }
 
 
-    button {
+    .btn-wrapper-reglog button {
         width: 16rem;
         font-size: 16.5px;
     }
@@ -330,19 +333,19 @@ input[type='date'], input[type='time'] {
 
     @media screen and (max-width: 525px) {
 
-        .rt-title {
+        .rt-title-reglog {
             font-size: 22px;
         }
 
-        .rt-subtitle {
+        .rt-subtitle-reglog {
             font-size: 16px;
         }
 
-        .input-box input {
+        .input-box-reglog input {
             width: 16rem;
         }
 
-        button {
+        .btn-wrapper-reglog button {
             width: 14rem;
             font-size: 14px;
         }
@@ -352,11 +355,11 @@ input[type='date'], input[type='time'] {
 
     @media screen and (max-width: 425px) {
 
-        .input-box input {
+        .input-box-reglog input {
             width: 12rem;
         }
 
-        button {
+        .btn-wrapper-reglog button {
             width: 12rem;
         }
 
@@ -365,18 +368,18 @@ input[type='date'], input[type='time'] {
             font-size: 13px;
         }
 
-        .input-box span {
+        .input-box-reglog span {
             font-size: 11px;
         }
     }
 
     @media screen and (max-width: 320px) {
 
-        .input-box input {
+        .input-box-reglog input {
             width: 10rem;
         }
 
-        .input-box span {
+        .input-box-reglog span {
             font-size: 9.8px;
         }
 

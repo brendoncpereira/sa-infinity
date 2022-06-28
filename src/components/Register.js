@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/register.css';
 import illustration from '../assets/illustration-register.png';
+import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
@@ -42,37 +43,37 @@ const Register = (props) => {
 
 
     return (
-        <body>
+        <body className='body-reglog'>
 
-            <main>
-                <div className="wrapper">
-                    <div className="lf-box">
-                    <p className='welcome-title'>We are <span>Infinity.</span> </p>
+            <main className='main-reglog'>
+                <div className="wrapper-reglog">
+                    <div className="lf-box-reglog">
+                    <p className='welcome-title-reglog'>We are <span>Infinity.</span> </p>
                         <img src={illustration}/>
-                        <p className='subtitle'>Infinity</p> 
+                        <p className='subtitle-reglog'>Infinity</p> 
                     </div>
 
-                    <div className="rt-box">
+                    <div className="rt-box-reglog">
 
-                        <div className='container-title'>
+                        <div className='container-title-reglog'>
 
-                            <p className='rt-title'>Vamos começar!</p>
-                            <p className='rt-subtitle'>Preencha os campos abaixo.</p>
+                            <p className='rt-title-reglog'>Vamos começar!</p>
+                            <p className='rt-subtitle-reglog'>Preencha os campos abaixo.</p>
 
                         </div>
 
 
 
-                        <form className='input-wrapper' onSubmit={handleSubmit(onSubmit)}>
+                        <form className='input-wrapper-reglog' onSubmit={handleSubmit(onSubmit)}>
 
-                            <div className='input-box-wrapper'>
+                            <div className='input-box-wrapper-reglog'>
 
 
 
-                                <div className='input-box'>
+                                <div className='input-box-reglog'>
                                    
 
-                                    <div className='input-icon-box'>
+                                    <div className='input-icon-box-reglog'>
                                         <FontAwesomeIcon className='span' icon={faUser} />
                                         <input type='text' name='first-name' placeholder='Nome' {...register("firstName", { required: true })} style={{ border: errors.firstName?.message ? '1px solid red' : '' }} />
 
@@ -85,10 +86,10 @@ const Register = (props) => {
 
 
 
-                                <div className='input-box'>
+                                <div className='input-box-reglog'>
                                    
 
-                                    <div className='input-icon-box'>
+                                    <div className='input-icon-box-reglog'>
                                         <FontAwesomeIcon className='span' icon={faUser} />
                                         <input type='text' name='last-name' placeholder='Sobrenome' {...register("lastName", { required: true } )} style={{ border: errors.lastName?.message ? '1px solid red' : '' }} />
                                          <span>{errors.lastName?.message}</span>
@@ -98,9 +99,9 @@ const Register = (props) => {
                                 </div>
 
 
-                                <div className='input-box'>
+                                <div className='input-box-reglog'>
                                     
-                                    <div className='input-icon-box'>
+                                    <div className='input-icon-box-reglog'>
                                         <FontAwesomeIcon className='span' icon={faEnvelope} />
                                         <input type='text' placeholder='Email'   {...register("email", { required: true })} style={{ border: errors.email?.message ? '1px solid red' : '' }} />
                                          <span>{errors.email?.message}</span>
@@ -112,9 +113,9 @@ const Register = (props) => {
 
                                 </div>
 
-                                <div className='input-box'>
+                                <div className='input-box-reglog'>
                                   
-                                    <div className='input-icon-box'>
+                                    <div className='input-icon-box-reglog'>
                                         <FontAwesomeIcon className='span' icon={faLock} />
 
                                         <input type='password' placeholder='Senha' {...register("password", { required: true })} style={{ border: errors.password?.message ? '1px solid red' : '' }} />
@@ -123,10 +124,10 @@ const Register = (props) => {
 
                                     </div>
 
-                                <div className='input-box'>
+                                <div className='input-box-reglog'>
                                    
 
-                                    <div className='input-icon-box'>
+                                    <div className='input-icon-box-reglog'>
                                         <FontAwesomeIcon className='span' icon={faLock} />
 
                                         <input type='password' placeholder='Confirme sua senha' {...register("confirmPassword", { required: true })} style={{ border: errors.confirmPassword?.message ? '1px solid red' : '' }} />
@@ -137,14 +138,14 @@ const Register = (props) => {
                             </div>
 
                             
-                            <div className='btn-wrapper'>
-                                <button type='submit'>Cadastrar</button>
+                            <div className='btn-wrapper-reglog'>
+                                <button className='button' type='submit'>Cadastrar</button>
                             </div>
 
                         </form>
 
                         <div className='go-login-box'>
-                            <p className='go-login'>Já possui conta? Faça login.</p>
+                            <p className='go-login'>Já possui conta?  <Link to={"/Login"}>  <span> Faça login. </span> </Link></p>
                         </div>
 
 

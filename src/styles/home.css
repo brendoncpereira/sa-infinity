@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-body {
+.body-home {
     background: #F8F8FF;
     max-height: 100% !important;
 }
 
-header {
+.header-home {
     height: 20vh;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -15,7 +15,7 @@ header {
     align-items: center;
 }
 
-header img {
+.header-home img {
     margin-top: 16px;
     
 }
@@ -23,39 +23,39 @@ header img {
 
 
 
-header h2 {
+.header-home h2 {
     font-size: 1em;
     text-align: center;
     color: #04345C;
     font-family: 'Quicksand';
 }
 
-main {
+.main-home {
     height: 80vh;
 }
 
-.wrapper {
+.wrapper-home {
      height: 100%;
 }
 
-.lf-box, .rt-box {
+.lf-box-home, .rt-box-home {
     height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.lf-box {
+.lf-box-home {
     background: url(../assets/bg-student.svg) no-repeat center center #04345C;
     background-size: cover;
 }
 
-.rt-box {
+.rt-box-home {
     background: url(../assets/bg-teacher.svg) no-repeat center center #1B343B;
     background-size: cover;
 }
 
-.wrap-content {
+.wrap-content-home {
     color: #F8F8FF;
     display: flex;
     flex-direction: column;
@@ -63,7 +63,7 @@ main {
     justify-content: center;
 }
 
-.wrap-content h1 {
+.wrap-content-home h1 {
     margin: 0;
     margin-top: 2rem;
     font-family: 'Quicksand';
@@ -72,7 +72,7 @@ main {
     letter-spacing: 1px; 
 }
 
-.p-container {
+.p-container-home {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,21 +82,21 @@ main {
     
 }
 
-.p-container p {
+.p-container-home p {
     font-size: 14px;
     font-family: 'Quicksand';
     font-weight: 500;
     text-align: center;
 }
 
-.btn-wrapper {
+.btn-wrapper-home {
     margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.btn-wrapper button {
+.btn-wrapper-home button {
     width: 8rem;
     padding: 0.5rem;
     font-size: 14px;
@@ -111,38 +111,38 @@ main {
 
 @media screen and (min-width: 425px) {
 
-    header {
+    .header-home {
         padding-top: 0.8rem;
         padding-bottom: 0.8rem;
     }
     
-    header img {
+    .header-home img {
         width: 180px;
         height: 68px;
     }
     
-    header h2 {
+    .header-home h2 {
         font-size: 1.2em;
     }
 
-    .wrap-content h1 {
+    .wrap-content-home h1 {
         margin-top: 3rem;
     }
     
-    .p-container {
+    .p-container-home {
         margin-top: 3rem;
     }
 
-    .p-container p {
+    .p-container-home p {
         font-size: 16px;
         
     }
         
-    .btn-wrapper {
+    .btn-wrapper-home {
         margin-top: 3rem;
     }
 
-    .btn-wrapper button {
+    .btn-wrapper-home button {
         width: 10em;
         font-size: 16px;
         
@@ -151,45 +151,45 @@ main {
 
 @media screen and (min-width: 768px) {
 
-    header {
+    .header-home {
         padding-top: 1em;
         padding-bottom: 1rem;
     }
     
-    header img {
+   .header-home img {
         width: 200px;
         height: 76px;
     }
     
     
 
-    .wrapper {
+    .wrapper-home {
         
         display: flex;
         justify-content: center;
         width: 100%;
     }
 
-    .lf-box, .rt-box {
+    .lf-box-home, .rt-box-home {
         width: 50%;
         height: 100%;
     }
 
-    .wrap-content h1 {
+    .wrap-content-home h1 {
         margin-top: 4rem;
         font-size: 28px;
     }
 
-    .p-container {
+    .p-container-home {
         margin-top: 4rem;
     }
 
-    .p-container p {
+    .p-container-home p {
         
         width: 85%;
 }
 
-    .btn-wrapper {
+    .btn-wrapper-home {
         margin-top: 4rem;
     }
 }
@@ -197,24 +197,24 @@ main {
 
 @media screen and (min-width: 900px) {
 
-    header img {
+    .header-home img {
         width: 220px;
         height: 92px;
     }  
     
     
-    header h2 {
+    .header-home h2 {
         font-size: 1.5em;
     }
     
 
-    .wrapper {
+    .wrapper-home {
         display: flex;
         justify-content: center;
         width: 100%;
     }
 
-    .lf-box, .rt-box {
+    .lf-box-home, .rt-box-home {
         width: 50%;
         height: 100%;
         background: none;
@@ -223,50 +223,50 @@ main {
         
     }
 
-  .lf-box:hover {
+  .lf-box-home:hover {
         background: url(../assets/bg-student.svg) no-repeat center center #04345C;
         background-size: cover;
         transition: 0.3s ease-in-out;
     }
 
-    .lf-box:hover .wrap-content,.rt-box:hover .wrap-content {
+    .lf-box-home:hover .wrap-content-home,.rt-box-home:hover .wrap-content-home {
         color: #F8F8FF;
     }
 
-    .lf-box:hover button, .rt-box:hover button {
+    .lf-box-home:hover button, .rt-box-home:hover button {
         border: 1px solid #F8F8FF;
         color: #F8F8FF;
     }
 
-    .rt-box:hover {
+    .rt-box-home:hover {
         background: url(../assets/bg-teacher.svg) no-repeat center center #1B343B;
         background-size: cover;
     }
 
-    .wrap-content {
+    .wrap-content-home {
         color: #04345C;
     }
 
-    .wrap-content h1 {
+    .wrap-content-home h1 {
         margin-top: 5rem;
     }
 
 
-     .p-container {
+     .p-container-home {
         width: 90%;
         margin-top: 5rem;
     }
 
-    .p-container p {
+    .p-container-home p {
         font-size: 20px;
         
     }
 
-    .btn-wrapper {
+    .btn-wrapper-home {
         margin-top: 5rem;
   } 
 
-    .btn-wrapper button {
+    .btn-wrapper-home button {
        color: #04345C;
        border: 1px solid #04345C;
        background: none;
@@ -276,7 +276,7 @@ main {
         transition: 0.5s;
 }
 
-.btn-wrapper button:hover {
+.btn-wrapper-home button:hover {
     background: #F8F8FF;
     color: #04345C;
     transition: 0.3s ease-in;
