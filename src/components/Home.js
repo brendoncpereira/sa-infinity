@@ -13,7 +13,7 @@ const Home = () => {
                    <img src={logo}/>
 
                 
-                   <h2>Escolha como você gostaria de se cadastrar.</h2>
+                   <h2>Junte-se a nós nesse conhecimento sem fim!</h2>
 
                 
                 </header>
