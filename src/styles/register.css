@@ -182,6 +182,8 @@
     width: 16rem;
     padding: 0.8rem;
     border: 1px solid #031D44;
+    border-radius: 0;
+    -webkit-appearance: none;
     background: transparent;
     cursor: pointer;
     text-transform: uppercase;
@@ -223,6 +225,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .submit-form-btn-aut {
+        background: #031D44;
+        color: #f8f8ff;
     }
 
     
