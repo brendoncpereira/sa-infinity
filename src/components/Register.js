@@ -24,137 +24,67 @@ const schema = yup.object({
   }).required();
 
 
-const Register = (props) => {
-
-    const { register, handleSubmit, watch, formState: { errors } } = useForm({
-        resolver: yupResolver(schema),
-        mode: 'onChange'
-        
-       
-      });
-
-      console.log(errors);
-
-    function onSubmit(userData) {
-        console.log(userData);
-        
-    }
-
-
-
+const Register = () => {
+    
     return (
-        <body className='body-reglog'>
-
-            <main className='main-reglog'>
-                <div className="wrapper-reglog">
-                    <div className="lf-box-reglog">
-                    <p className='welcome-title-reglog'>We are <span>Infinity.</span> </p>
-                        <img src={illustration}/>
-                        <p className='subtitle-reglog'>Infinity</p> 
+        <>
+            <div className='main-wrapper-aut'>
+                
+                <div className='left-container-aut'>
+                    <div className='illustration-aut'>
+                        
                     </div>
 
-                    <div className="rt-box-reglog">
+                    {/* <div className='title-aut'>
+                        <h1>Reiventando a forma de aprender.</h1>
+                        
+                    </div> */}
 
-                        <div className='container-title-reglog'>
-
-                            <p className='rt-title-reglog'>Vamos começar!</p>
-                            <p className='rt-subtitle-reglog'>Preencha os campos abaixo.</p>
-
-                        </div>
-
-
-
-                        <form className='input-wrapper-reglog' onSubmit={handleSubmit(onSubmit)}>
-
-                            <div className='input-box-wrapper-reglog'>
-
-
-
-                                <div className='input-box-reglog'>
-                                   
-
-                                    <div className='input-icon-box-reglog'>
-                                        <FontAwesomeIcon className='span' icon={faUser} />
-                                        <input type='text' name='first-name' placeholder='Nome' {...register("firstName", { required: true })} style={{ border: errors.firstName?.message ? '1px solid red' : '' }} />
-
-                                        { <span>{errors.firstName?.message}</span>}
-
-                                    </div>
-
-
-                                </div>
-
-
-
-                                <div className='input-box-reglog'>
-                                   
-
-                                    <div className='input-icon-box-reglog'>
-                                        <FontAwesomeIcon className='span' icon={faUser} />
-                                        <input type='text' name='last-name' placeholder='Sobrenome' {...register("lastName", { required: true } )} style={{ border: errors.lastName?.message ? '1px solid red' : '' }} />
-                                         <span>{errors.lastName?.message}</span>
-        
-                                    </div>
-
-                                </div>
-
-
-                                <div className='input-box-reglog'>
-                                    
-                                    <div className='input-icon-box-reglog'>
-                                        <FontAwesomeIcon className='span' icon={faEnvelope} />
-                                        <input type='text' placeholder='Email'   {...register("email", { required: true })} style={{ border: errors.email?.message ? '1px solid red' : '' }} />
-                                         <span>{errors.email?.message}</span>
-                                    </div>
-
-
-
-
-
-                                </div>
-
-                                <div className='input-box-reglog'>
-                                  
-                                    <div className='input-icon-box-reglog'>
-                                        <FontAwesomeIcon className='span' icon={faLock} />
-
-                                        <input type='password' placeholder='Senha' {...register("password", { required: true })} style={{ border: errors.password?.message ? '1px solid red' : '' }} />
-                                          <span>{errors.password?.message}</span>
-                                    </div>
-
-                                    </div>
-
-                                <div className='input-box-reglog'>
-                                   
-
-                                    <div className='input-icon-box-reglog'>
-                                        <FontAwesomeIcon className='span' icon={faLock} />
-
-                                        <input type='password' placeholder='Confirme sua senha' {...register("confirmPassword", { required: true })} style={{ border: errors.confirmPassword?.message ? '1px solid red' : '' }} />
-                                         <span>{errors.confirmPassword?.message}</span>
-                                    </div>
-
-                                    </div>
-                            </div>
-
-                            
-                            <div className='btn-wrapper-reglog'>
-                                <button className='button' type='submit'>Cadastrar</button>
-                            </div>
-
-                        </form>
-
-                        <div className='go-login-box'>
-                            <p className='go-login'>Já possui conta?  <Link to={"/Login"}>  <span> Faça login. </span> </Link></p>
-                        </div>
-
-
-
+                    <div className='subtitle-aut'>
+                    <h3>Já tem uma conta? <span>  Faça Login :)</span> </h3>
                     </div>
                 </div>
-            </main>
 
-        </body>
+                <div className='right-container-aut'>
+
+                    <div className='wrapper-form-container-aut'>
+
+                        <div className='form-container-title-aut'>
+
+                        <h1>infinity</h1>
+                        <p> Junte-se a nós, crie sua conta.</p>
+
+                        </div>
+
+                    <form className='form-group-aut'>
+                        <div className='input-field-aut'>
+
+                        <input type='text' placeholder='Nome:' className='input-aut'/>
+                        <input type='text' placeholder='Sobrenome:' className='input-aut'/>
+                        <input type='text' placeholder='Email:' className='input-aut'/>
+                        <input type='password' placeholder='Senha:' className='input-aut'/>
+                        <input type='password' placeholder='Confirme sua senha:' className='input-aut'/>
+
+                        </div>
+                        
+                        <div className='btn-wrapper-aut'>
+                        <button className='submit-form-btn-aut' type='submit'>Cadastrar</button>
+                        </div>
+
+                </form>
+
+                <div className='subtitle-bp-900px-aut'>
+                    <h3>Já tem uma conta? <span>  Faça Login :)</span> </h3>
+                    </div>
+                    
+                    </div>
+
+                    
+                </div>
+
+                
+            </div>
+        </>
     )
 }
 
