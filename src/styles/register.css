@@ -159,6 +159,21 @@
     
 }
 
+.input-box-aut {
+    position: relative;
+}
+
+.input-box-aut .span {
+    right: 0;
+    margin: 0.8rem auto;
+    top: 40px;
+    position: absolute;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: red;
+    
+}
+
 .input-aut {
     margin: 1rem 0;
     padding: 0.5rem 0;

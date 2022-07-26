@@ -38,78 +38,79 @@ const Login = (props) => {
 
 
     return (
-        <body className='body-log'>
-
-            <main className='main-log'>
-                <div className="wrapper-log">
-                    <div className="lf-box-log">
-                    <p className='welcome-title-log'>We are <span>Infinity.</span> </p>
-                        <img src={illustration}/>
-                        <p className='subtitle-log'>Infinity</p> 
-                    </div>
-
-                    <div className="rt-box-log">
-
-                        <div className='container-title-log'>
-
-                            <p className='rt-title-log '>Vamos começar!</p>
-                            <p className='rt-subtitle-log'>Preencha os campos abaixo.</p>
-
-                        </div>
-
-
-
-                        <form className='input-wrapper-log' onSubmit={handleSubmit(onSubmit)}>
-
-                            <div className='input-box-wrapper-log'>
-
-
-                         <div className='input-box-log'>
-                                    
-                                    <div className='input-icon-box-log'>
-                                        <FontAwesomeIcon className='span' icon={faEnvelope} />
-                                        <input type='text' placeholder='Email'   {...register("email", { required: true })} style={{ border: errors.email?.message ? '1px solid red' : '' }} />
-                                         <span>{errors.email?.message}</span>
-                                    </div>
-
-
-
-
-
-                                </div>
-
-                                <div className='input-box-log'>
-                                  
-                                    <div className='input-icon-box-log'>
-                                        <FontAwesomeIcon className='span' icon={faLock} />
-
-                                        <input type='password' placeholder='Senha' {...register("password", { required: true })} style={{ border: errors.password?.message ? '1px solid red' : '' }} />
-                                          <span>{errors.password?.message}</span>
-                                    </div>
-
-                                    </div>
-
-                               
-                            </div>
-
-                            
-                            <div className='btn-wrapper-log'>
-                                <button className='button' type='submit'>Entrar</button>
-                            </div>
-
-                        </form>
-
-                        <div className='go-login'>
-                            <p className='go-login'>Não possui login? <Link to={"/Register"}>  <span> Crie sua conta. </span> </Link> </p>
-                        </div>
-
-
-
-                    </div>
+        <>
+        <div className='main-wrapper-aut'>
+            
+            <div className='left-container-aut'>
+                <div className='illustration-aut'>
+                    
                 </div>
-            </main>
 
-        </body>
+                {/* <div className='title-aut'>
+                    <h1>Reiventando a forma de aprender.</h1>
+                    
+                </div> */}
+
+                <div className='subtitle-aut'>
+                <h3>Ainda não criou sua conta? 
+                    
+                    <Link to={'/Register'}>
+                    <span>  Cadastre-se :) </span>
+                    </Link>
+                </h3>
+                </div>
+            </div>
+
+            <div className='right-container-aut'>
+
+                <div className='wrapper-form-container-aut'>
+
+                    <div className='form-container-title-aut'>
+
+                    <h1>infinity</h1>
+                    <p> Entre com seus dados.</p>
+
+                    </div>
+
+                <form className='form-group-aut' onSubmit={handleSubmit(onSubmit)}>
+                    <div className='input-field-aut'>
+                    
+                   
+
+                    
+                    <div className='input-box-aut-lg'>
+                    <input type='text' placeholder='Email:' className='input-aut' {...register("email", { required: true })} style={{ borderBottom: errors.email?.message ? '1px solid red' : '' }}/>
+                    <span className='span-lg'>{errors.email?.message}</span>
+                    </div>
+                    
+                    <div className='input-box-aut-lg'>
+                    <input type='password' placeholder='Senha:' className='input-aut' {...register("password", { required: true })} style={{ color: errors.password?.message ? 'red' : '', borderBottom: errors.password?.message ? '1px solid red' : ''}}/>
+                    <span className='span-lg'>{errors.password?.message}</span>
+                    </div>
+                   
+                  
+                    
+
+                    </div>
+                    
+                    <div className='btn-wrapper-aut'>
+                    <button className='submit-form-btn-aut' type='submit'>Entrar</button>
+                    </div>
+
+            </form>
+
+            <div className='subtitle-bp-900px-aut'>
+                <h3>Ainda não criou sua conta? <span>  Cadastre-se :)</span> </h3>
+                </div>
+
+                </div>
+
+                
+            </div>
+
+            
+        </div>
+    </>
     )
 }
 

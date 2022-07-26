@@ -15,16 +15,30 @@ import { logDOM } from '@testing-library/react';
 
 
 const schema = yup.object({
-    firstName: yup.string().required('Campo obrigatório!'),
-    lastName: yup.string().required('Campo obrigatório!'),
-    email: yup.string().email('O email inserido é inválido!').required('Campo obrigatório!'),
-    password: yup.string().min(8, 'A senha deve conter pelo menos oito caracteres!').required('Campo obrigatório!'),
-    confirmPassword: yup.string().oneOf([yup.ref('password')], 'As senhas não coincidem!').required('Campo obrigatório')
+    firstName: yup.string().required('O nome é obrigatório!'),
+    lastName: yup.string().required('O sobrenome é obrigatório!'),
+    email: yup.string().required('O email é obrigatório!').email('O email informado é invalido!'),
+    password: yup.string().required('A senha é obrigatória!').min(8, 'A senha é menor que 8 caracteres!'),
+    confirmPassword: yup.string().required('Por favor, confirme sua senha!').oneOf([yup.ref('password')], 'As senhas não coincidem!')
     
   }).required();
 
 
 const Register = () => {
+
+    const { register, handleSubmit, watch, formState: { errors } } = useForm({
+        resolver: yupResolver(schema),
+        mode: 'onChange'
+        
+       
+      });
+
+
+    function onSubmit(userData) {
+        console.log(userData);
+        
+    }
+
     
     return (
         <>
@@ -41,7 +55,12 @@ const Register = () => {
                     </div> */}
 
                     <div className='subtitle-aut'>
-                    <h3>Já tem uma conta? <span>  Faça Login :)</span> </h3>
+                    <h3>Já tem uma conta? 
+                        
+                        <Link to={'/Login'}>
+                        <span>  Faça Login :) </span>
+                        </Link>
+                    </h3>
                     </div>
                 </div>
 
@@ -56,14 +75,34 @@ const Register = () => {
 
                         </div>
 
-                    <form className='form-group-aut'>
+                    <form className='form-group-aut' onSubmit={handleSubmit(onSubmit)}>
                         <div className='input-field-aut'>
+                        
+                        <div className='input-box-aut'>
+                        <input type='text' placeholder='Nome:' className='input-aut' {...register("firstName", { required: true })} style={{borderBottom: errors.firstName?.message ? '1px solid red' : '' }}  />
+                        <span className='span'>{errors.firstName?.message}</span>
+                        </div>
 
-                        <input type='text' placeholder='Nome:' className='input-aut'/>
-                        <input type='text' placeholder='Sobrenome:' className='input-aut'/>
-                        <input type='text' placeholder='Email:' className='input-aut'/>
-                        <input type='password' placeholder='Senha:' className='input-aut'/>
-                        <input type='password' placeholder='Confirme sua senha:' className='input-aut'/>
+                        <div className='input-box-aut'>
+                        <input type='text' placeholder='Sobrenome:' className='input-aut' {...register("lastName", { required: true })} style={{ borderBottom: errors.lastName?.message ? '1px solid red' : '' }}/>
+                        <span className='span'>{errors.lastName?.message}</span>
+                        </div>
+                        
+                        <div className='input-box-aut'>
+                        <input type='text' placeholder='Email:' className='input-aut' {...register("email", { required: true })} style={{ color: errors.email?.message ? 'red' : '', borderBottom: errors.email?.message ? '1px solid red' : '' }}/>
+                        <span className='span'>{errors.email?.message}</span>
+                        </div>
+                        
+                        <div className='input-box-aut'>
+                        <input type='password' placeholder='Senha:' className='input-aut' {...register("password", { required: true })} style={{ color: errors.password?.message ? 'red' : '', borderBottom: errors.password?.message ? '1px solid red' : '' }}/>
+                        <span className='span'>{errors.password?.message}</span>
+                        </div>
+                       
+                        <div className='input-box-aut'>
+                        <input type='password' placeholder='Confirme sua senha:' className='input-aut' {...register("confirmPassword", { required: true })} style={{ color: errors.confirmPassword?.message ? 'red' : '', borderBottom: errors.confirmPassword?.message ? '1px solid red' : '' }}/>
+                        <span className='span'>{errors.confirmPassword?.message}</span>
+                        </div>
+                        
 
                         </div>
                         
@@ -74,9 +113,12 @@ const Register = () => {
                 </form>
 
                 <div className='subtitle-bp-900px-aut'>
-                    <h3>Já tem uma conta? <span>  Faça Login :)</span> </h3>
+                    <h3>Já tem uma conta?  
+                        <Link to={'/Login'}>
+                        <span>  Faça Login :) </span>
+                        </Link> </h3>
                     </div>
-                    
+
                     </div>
 
                     
