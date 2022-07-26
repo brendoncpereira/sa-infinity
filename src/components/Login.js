@@ -16,7 +16,7 @@ import { logDOM } from '@testing-library/react';
 
 const schema = yup.object({
     email: yup.string().email('Email ou senha inválidos!').required('Email ou senha inválidos!'),
-    password: yup.string().required('Email ou senha inválidos!'),
+    senha: yup.string().required('Email ou senha inválidos!'),
     
   }).required();
 
@@ -28,12 +28,30 @@ const Login = (props) => {
         
        
       });
-
-
-    function onSubmit(userData) {
+      async function onSubmit(userData, event) {
         console.log(userData);
+        event.preventDefault();
+        const url = 'http://localhost:3000/api/estudanteslogin';
+        const options = {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json;charset=UTF-8'
+          },
+          body: JSON.stringify({
+            email: event.target.email.value,
+            senha: event.target.senha.value
+          })
+        };
+        await fetch(url, options)
+          .then(response => {
+            console.log(response.json());
+          });
         
+
     }
+
+
 
 
 
@@ -84,8 +102,8 @@ const Login = (props) => {
                     </div>
                     
                     <div className='input-box-aut-lg'>
-                    <input type='password' placeholder='Senha:' className='input-aut' {...register("password", { required: true })} style={{ color: errors.password?.message ? 'red' : '', borderBottom: errors.password?.message ? '1px solid red' : ''}}/>
-                    <span className='span-lg'>{errors.password?.message}</span>
+                    <input type='password' placeholder='Senha:' className='input-aut' {...register("senha", { required: true })} style={{ color: errors.senha?.message ? 'red' : '', borderBottom: errors.senha?.message ? '1px solid red' : ''}}/>
+                    <span className='span-lg'>{errors.senha?.message}</span>
                     </div>
                    
                   
@@ -94,7 +112,7 @@ const Login = (props) => {
                     </div>
                     
                     <div className='btn-wrapper-aut'>
-                    <button className='submit-form-btn-aut' type='submit'>Entrar</button>
+                    <button className='submit-form-btn-aut' type='submit' >Entrar</button>
                     </div>
 
             </form>
