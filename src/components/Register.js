@@ -15,11 +15,11 @@ import { logDOM } from '@testing-library/react';
 
 
 const schema = yup.object({
-    firstName: yup.string().required('O nome é obrigatório!'),
-    lastName: yup.string().required('O sobrenome é obrigatório!'),
+    nome: yup.string().required('O nome é obrigatório!'),
+    sobrenome: yup.string().required('O sobrenome é obrigatório!'),
     email: yup.string().required('O email é obrigatório!').email('O email informado é invalido!'),
-    password: yup.string().required('A senha é obrigatória!').min(8, 'A senha é menor que 8 caracteres!'),
-    confirmPassword: yup.string().required('Por favor, confirme sua senha!').oneOf([yup.ref('password')], 'As senhas não coincidem!')
+    senha: yup.string().required('A senha é obrigatória!').min(8, 'A senha é menor que 8 caracteres!'),
+    confirmsenha: yup.string().required('Por favor, confirme sua senha!').oneOf([yup.ref('senha')], 'As senhas não coincidem!')
     
   }).required();
 
@@ -33,11 +33,38 @@ const Register = () => {
        
       });
 
+      
+      
 
-    function onSubmit(userData) {
+    function onSubmit(userData, event) {
         console.log(userData);
+        event.preventDefault();
+        const url = 'http://localhost:3000/api/estudantes';
+        const options = {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json;charset=UTF-8'
+          },
+          body: JSON.stringify({
+            nome: event.target.nome.value,
+            sobrenome: event.target.sobrenome.value,
+            email: event.target.email.value,
+            senha: event.target.senha.value
+          })
+        };
         
+        fetch(url, options)
+          .then(response => {
+            console.log(response.status);
+          });
+        
+
     }
+
+    
+
+    
 
     
     return (
@@ -79,13 +106,13 @@ const Register = () => {
                         <div className='input-field-aut'>
                         
                         <div className='input-box-aut'>
-                        <input type='text' placeholder='Nome:' className='input-aut' {...register("firstName", { required: true })} style={{borderBottom: errors.firstName?.message ? '1px solid red' : '' }}  />
-                        <span className='span'>{errors.firstName?.message}</span>
+                        <input type='text' placeholder='Nome:' className='input-aut' {...register("nome", { required: true })} style={{borderBottom: errors.nome?.message ? '1px solid red' : '' }}  />
+                        <span className='span'>{errors.nome?.message}</span>
                         </div>
 
                         <div className='input-box-aut'>
-                        <input type='text' placeholder='Sobrenome:' className='input-aut' {...register("lastName", { required: true })} style={{ borderBottom: errors.lastName?.message ? '1px solid red' : '' }}/>
-                        <span className='span'>{errors.lastName?.message}</span>
+                        <input type='text' placeholder='Sobrenome:' className='input-aut' {...register("sobrenome", { required: true })} style={{ borderBottom: errors.sobrenome?.message ? '1px solid red' : '' }}/>
+                        <span className='span'>{errors.sobrenome?.message}</span>
                         </div>
                         
                         <div className='input-box-aut'>
@@ -94,13 +121,13 @@ const Register = () => {
                         </div>
                         
                         <div className='input-box-aut'>
-                        <input type='password' placeholder='Senha:' className='input-aut' {...register("password", { required: true })} style={{ color: errors.password?.message ? 'red' : '', borderBottom: errors.password?.message ? '1px solid red' : '' }}/>
-                        <span className='span'>{errors.password?.message}</span>
+                        <input type='password' placeholder='Senha:' className='input-aut' {...register("senha", { required: true })} style={{ color: errors.senha?.message ? 'red' : '', borderBottom: errors.senha?.message ? '1px solid red' : '' }}/>
+                        <span className='span'>{errors.senha?.message}</span>
                         </div>
                        
                         <div className='input-box-aut'>
-                        <input type='password' placeholder='Confirme sua senha:' className='input-aut' {...register("confirmPassword", { required: true })} style={{ color: errors.confirmPassword?.message ? 'red' : '', borderBottom: errors.confirmPassword?.message ? '1px solid red' : '' }}/>
-                        <span className='span'>{errors.confirmPassword?.message}</span>
+                        <input type='password' placeholder='Confirme sua senha:' className='input-aut' {...register("confirmsenha", { required: true })} style={{ color: errors.confirmsenha?.message ? 'red' : '', borderBottom: errors.confirmsenha?.message ? '1px solid red' : '' }}/>
+                        <span className='span'>{errors.confirmsenha?.message}</span>
                         </div>
                         
 
