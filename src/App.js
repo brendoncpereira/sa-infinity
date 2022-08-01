@@ -4,13 +4,14 @@ import Home from './components/Home';
 import Register from './components/Register';
 import Login from './components/Login';
 import { ClassList } from './components/ClassList';
+import Main from './components/Main';
 
 const App = () => {
   return(
     <BrowserRouter>
       <Routes>
     
-      <Route element={<Home/>} path={"/"} exact/>
+      <Route element={<Main/>} path={"/"} exact/>
         <Route element={<Register/>} path={"/Register"} />
         <Route element={<Login/>} path={"/Login"} />
         <Route element={<ClassList/>} path={"/ClassList"}/>

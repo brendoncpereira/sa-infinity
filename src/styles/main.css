@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-wrapper {
+    min-height: 100vh;
+    background-color: #F8F8FF;   
+}
+
+.main-nav {
+    height: 10vh;
+    border: 1px solid red;
+}
+
+.container-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mini-container-math-main, 
+.mini-container-portuguese-main,
+.mini-container-geography-main,
+.mini-container-physics-main,
+.mini-container-chemistry-main,
+.mini-container-biology-main,
+.mini-container-history-main,
+.mini-container-filosofy-main,
+.mini-container-sociology-main,
+.mini-container-english-main,
+.mini-container-spanish-main,
+.mini-container-redaction-main {
+    width: 90%;
+    height: 15rem;
+    border-radius: 3px;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.mini-container-math-main {
+    background: url(../assets/bg-math.png) no-repeat center center;
+    background-size: cover;
+}
+
+.mini-container-portuguese-main {
+    background: url(../assets/bg-portuguese.png) no-repeat center center;
+    background-size: cover;
+}
+
+    .mini-container-geography-main,
+    .mini-container-physics-main,
+    .mini-container-chemistry-main,
+    .mini-container-biology-main,
+    .mini-container-history-main,
+    .mini-container-filosofy-main,
+    .mini-container-sociology-main,
+    .mini-container-english-main,
+    .mini-container-spanish-main,
+    .mini-container-redaction-main {
+    background: url(../assets/bg-geography.png) no-repeat center center;
+    background-size: cover;
+}
+
+.container-main h1 {
+    color:#031D44;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.container-main button {
+    width: 10rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #031D44;
+    font-weight: bold;
+    color: #031D44;
+    border-radius: 2px;
+    background: transparent;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+
+.container-main button:hover {
+    transform: scale(0.99);
+    background-color: #031D44;
+    color: #F8F8FF;
+}
+
+.main-footer {
+    height: 50vh;
+    background-color: #031D44;
+}
+
+@media screen and (min-width: 768px) {
+    .mini-container-math-main, 
+    .mini-container-portuguese-main,
+    .mini-container-geography-main,
+    .mini-container-physics-main,
+    .mini-container-chemistry-main,
+    .mini-container-biology-main,
+    .mini-container-history-main,
+    .mini-container-filosofy-main,
+    .mini-container-sociology-main,
+    .mini-container-english-main,
+    .mini-container-spanish-main,
+    .mini-container-redaction-main {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .mini-container-math-main, 
+    .mini-container-portuguese-main,
+    .mini-container-geography-main,
+    .mini-container-physics-main,
+    .mini-container-chemistry-main,
+    .mini-container-biology-main,
+    .mini-container-history-main,
+    .mini-container-filosofy-main,
+    .mini-container-sociology-main,
+    .mini-container-english-main,
+    .mini-container-spanish-main,
+    .mini-container-redaction-main
+    {
+        justify-content: space-between;
+        padding: 0 3rem;
+    }
+}
