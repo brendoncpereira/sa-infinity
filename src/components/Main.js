@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/main.css';
+import logo from '../assets/logo.svg';
 
 
 const Main = () => {
@@ -92,22 +93,49 @@ const Main = () => {
 
                
 
-                <div className='contant-section'>
+                <div className='content-section'>
+                    <img src={logo}/>
 
+                    
                 </div>
 
                 <div className='rules-section'>
+                        
 
+                        <div className='wrapper-content-footer'>
+
+                        <h2>Product</h2>
+
+                        <ul className='ul-footer'>
+                            <li className='li-footer'> <a href='#' className='footer-link'>Theme Design</a> </li>
+                            <li className='li-footer'> <a href='#' className='footer-link'>Plugin Desgin</a> </li>
+                            <li className='li-footer'> <a href='#' className='footer-link'>Wordpress</a> </li>
+                            <li className='li-footer'> <a href='#' className='footer-link'>Joomia Template</a> </li>
+                            <li className='li-footer'> <a href='#' className='footer-link'>HTML Template</a> </li>
+                        </ul>
+                        </div>
                 </div>
 
                 <div className='address-section'>
 
+                        <div className='wrapper-content-footer'>
+                        <h2>Useful Link</h2>
+
+                        <ul className='ul-footer'>
+                            <li className='li-footer'> <a href='#' className='footer-link'>Blog</a> </li>
+                            <li className='li-footer'> <a href='#' className='footer-link'>Pricing</a> </li>
+                            <li className='li-footer'> <a href='#' className='footer-link'>Sales</a> </li>
+                            <li className='li-footer'> <a href='#' className='footer-link'>Tickets</a> </li>
+                            <li className='li-footer'> <a href='#' className='footer-link'>Certifications</a> </li>
+                        </ul>
+                        </div>
+                       
                 </div>
 
                 </div>
 
                 <div className='final-footer-text'>
-                        
+                        <h5>INFINITY© 2022 | Todos os direitos reservados</h5>
                 </div>
             </footer>
         </div>
