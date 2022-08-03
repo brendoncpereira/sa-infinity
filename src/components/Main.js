@@ -1,6 +1,10 @@
 import React from 'react';
 import '../styles/main.css';
-import logo from '../assets/logo.svg';
+import logoFooter from '../assets/logo-footer.png';
+import instagram from '../assets/instagram.svg';
+import facebook from '../assets/facebook.svg';
+import twitter from '../assets/twitter.svg';
+import linkedin from '../assets/linkedin.svg';
 
 
 const Main = () => {
@@ -94,8 +98,32 @@ const Main = () => {
                
 
                 <div className='content-section'>
-                    <img src={logo}/>
 
+                    <div className='wrapper-content-footer'>
+
+                    <img src={logoFooter} className='logo'/>
+                    
+                   
+
+                        <div className='effect-text-footer-main'>
+                        
+                        <p> A educação move o mundo.</p>
+                        
+                        <p>Acompanhe nossas redes sociais e fique por dentro das novidades!</p>
+
+                        </div>
+
+                        <div className='icons-social-media-footer-main'>
+                            <img src={instagram} className='social-media'/>
+                            <img src={facebook} className='social-media'/>
+                            <img src={twitter} className='social-media'/>
+                            <img src={linkedin} className='social-media'/>
+                      
+
+                       
+                    </div>
+                    
+                    </div>
                     
                 </div>
 
@@ -104,7 +132,10 @@ const Main = () => {
 
                         <div className='wrapper-content-footer'>
 
-                        <h2>Product</h2>
+
+                        
+                            <h2>Product</h2>
+                        
 
                         <ul className='ul-footer'>
                             <li className='li-footer'> <a href='#' className='footer-link'>Theme Design</a> </li>
@@ -119,7 +150,10 @@ const Main = () => {
                 <div className='address-section'>
 
                         <div className='wrapper-content-footer'>
-                        <h2>Useful Link</h2>
+                        
+                         
+                            <h2>Useful Link</h2>
+                        
 
                         <ul className='ul-footer'>
                             <li className='li-footer'> <a href='#' className='footer-link'>Blog</a> </li>
@@ -130,6 +164,23 @@ const Main = () => {
                         </ul>
                         </div>
                        
+                </div>
+
+                <div className='last-section'>
+                
+                <div className='wrapper-content-footer'>
+
+                    
+                        <h2>Adress</h2>
+                    
+                        
+
+                        <ul className='ul-footer'>
+                            <li className='li-footer'> <a href='#' className='footer-link'>127, Westwood Lone</a> </li>
+                            <li className='li-footer'> <a href='#' className='footer-link'>DA15 9PS, Sidcup</a> </li>
+                            <li className='li-footer'> <a href='#' className='footer-link'>London, UK</a> </li>
+                        </ul>
+                        </div>
                 </div>
 
                 </div>
