@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/main.css';
 import logoFooter from '../assets/logo-footer.png';
-import instagram from '../assets/instagram.svg';
+import youtube from '../assets/youtube.svg';
 import facebook from '../assets/facebook.svg';
 import twitter from '../assets/twitter.svg';
 import linkedin from '../assets/linkedin.svg';
@@ -98,32 +98,51 @@ const Main = () => {
                
 
                 <div className='content-section'>
-
-                    <div className='wrapper-content-footer'>
-
-                    <img src={logoFooter} className='logo'/>
                     
-                   
 
-                        <div className='effect-text-footer-main'>
+                    
+                <div className='wrapper-content-footer'>
                         
-                        <p> A educação move o mundo.</p>
-                        
-                        <p>Acompanhe nossas redes sociais e fique por dentro das novidades!</p>
-
-                        </div>
-
-                        <div className='icons-social-media-footer-main'>
-                            <img src={instagram} className='social-media'/>
-                            <img src={facebook} className='social-media'/>
-                            <img src={twitter} className='social-media'/>
-                            <img src={linkedin} className='social-media'/>
-                      
-
+                         
+                        <h1>Sobre a Infinity</h1>
                        
-                    </div>
                     
+
+                    <div className='effect-text-footer-main'>
+                        <p>Nós acreditamos que a educação move o mundo.
+                            Por isso, tentamos auxiliar no aprendizado dos estudantes do nosso país.
+                            Acompanhe nosso trabalho nas redes sociais!
+                        </p>
                     </div>
+
+                    <div className='icons-social-media-footer-main'>
+
+                            <div className='bg-radius-icons-footer'>
+                                <img src={youtube} className='social-media'/>
+                                </div>
+
+                            <div className='bg-radius-icons-footer'>
+    <img src={facebook} className='social-media'/>
+            </div>
+
+<div className='bg-radius-icons-footer'>
+<img src={twitter} className='social-media'/>
+</div>
+
+<div className='bg-radius-icons-footer'>
+<img src={linkedin} className='social-media'/>
+</div>
+
+
+</div>
+
+
+                    </div>
+                        
+
+                        
+
+                    
                     
                 </div>
 

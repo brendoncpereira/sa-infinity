@@ -95,6 +95,7 @@
 
 .main-footer {
     height: 60vh;
+    padding: 0 2rem;
     background-color: #031D44;
 }
 
@@ -108,25 +109,70 @@
 .content-section {
     width: 40%;
     height: 100%;
-    margin: 0 1rem;
     /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
 }
 
-.content-section .logo {
-    width: 200px;
+
+
+
+
+.content-section h1 {
+    color: #F8F8FF;
 }
 
-.half-content-section {
-    height: 50%;
-}
-
-.half-content-section p {
-    color: gray;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
+.effect-text-footer-main  {
+     max-width: 100%;
+     /* border: 1px solid red; */
+     padding: 2rem 0;
+     display: flex;
+    align-items: center;
     
 }
+
+.effect-text-footer-main p {
+    color: gray;
+    text-align: justify;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.icons-social-media-footer-main {
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    
+}
+
+
+
+.bg-radius-icons-footer {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    border-radius: 2px;
+    margin-right: 2rem;
+    cursor: pointer; 
+    transition: 300ms;
+}
+
+.bg-radius-icons-footer img {
+    transition: 300ms;
+}
+
+
+.bg-radius-icons-footer:hover img {
+    transform: scale(1.1);
+}
+
+
 
  .rules-section, .address-section, .last-section {
     width: 20%;
@@ -149,7 +195,7 @@
 
 
 
-.wrapper-content-footer h2 {
+.rules-section h2, .address-section h2, .last-section h2 {
     color: #F8F8FF;
     text-align: justify;
     font-size: 20px;
