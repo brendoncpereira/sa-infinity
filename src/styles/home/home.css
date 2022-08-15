@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Raleway';
+}
+
+.body-home {
+    background: #F8F8FF;
+    max-height: 100% !important;
+
+}
+
+.header-home {
+    height: 20vh;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-home img {
+    margin-top: 10px;
+}
+
+
+
+
+.header-home h2 {
+    font-size: 1em;
+    text-align: center;
+    color: #1D3557;
+    
+}
+
+.main-home {
+    height: 80vh;
+}
+
+.wrapper-home {
+     height: 100%;
+}
+
+.lf-box-home, .rt-box-home {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lf-box-home {
+    background: url(../../assets/home/svg/bg-student.svg) no-repeat center center #1D3557;
+    background-size: cover;
+}
+
+.rt-box-home {
+    background: url(../../assets/home/svg/bg-teacher.svg) no-repeat center center #457b9d;
+    background-size: cover;
+}
+
+.wrap-content-home {
+    color: #F8F8FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrap-content-home h1 {
+    margin: 0;
+    margin-top: 2rem;
+   text-transform: uppercase;
+    font-size: x-large;
+    text-align: center;
+    letter-spacing: 1px; 
+}
+
+.p-container-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin-top: 2rem;
+    width: 80%;
+    
+}
+
+.p-container-home p {
+    font-size: 14px;
+   
+    font-weight: 500;
+    text-align: center;
+}
+
+.btn-wrapper-home {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-wrapper-home button {
+    width: 8rem;
+    padding: 0.5rem;
+    font-size: 14px;
+  
+    font-weight: 600;
+    border: 1px solid #F8F8FF;
+    border-radius: 2rem;
+    color: #1D3557;
+    background-color: #F8F8FF;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 425px) {
+
+    .header-home {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+    
+    
+    
+    .header-home h2 {
+        font-size: 1em;
+    }
+
+    .wrap-content-home h1 {
+        margin-top: 3rem;
+    }
+    
+    .p-container-home {
+        margin-top: 3rem;
+    }
+
+    .p-container-home p {
+        font-size: 16px;
+        
+    }
+        
+    .btn-wrapper-home {
+        margin-top: 3rem;
+    }
+
+    .btn-wrapper-home button {
+        width: 10em;
+        font-size: 16px;
+        
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .header-home {
+        padding-top: 1em;
+        padding-bottom: 1rem;
+    }
+    
+   
+    
+    
+
+    .wrapper-home {
+        
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .lf-box-home, .rt-box-home {
+        width: 50%;
+        height: 100%;
+    }
+
+    .wrap-content-home h1 {
+        margin-top: 4rem;
+        font-size: 28px;
+    }
+
+    .p-container-home {
+        margin-top: 4rem;
+    }
+
+    .p-container-home p {
+        
+        width: 85%;
+}
+
+    .btn-wrapper-home {
+        margin-top: 4rem;
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+
+    
+    
+    
+    .header-home h2 {
+        font-size: 1.5em;
+    }
+    
+
+    .wrapper-home {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .lf-box-home, .rt-box-home {
+        width: 50%;
+        height: 100%;
+        background: none;
+        transition: 0.3s ease-out;
+        position: relative;
+        
+    }
+
+  .lf-box-home:hover {
+        background: url(../../assets/home/svg/bg-student.svg) no-repeat center center  #1D3557;
+        background-size: cover;
+        transition: 0.3s ease-in-out;
+    }
+
+    .lf-box-home:hover .wrap-content-home,.rt-box-home:hover .wrap-content-home {
+        color: #F8F8FF;
+    }
+
+    .lf-box-home:hover button, .rt-box-home:hover button {
+        border: 1px solid #F8F8FF;
+        color: #F8F8FF;
+    }
+
+    .rt-box-home:hover {
+        background: url(../../assets/home/svg/bg-teacher.svg) no-repeat center center #457b9d;
+        background-size: cover;
+    }
+
+    .wrap-content-home {
+        color: #1D3557;
+    }
+
+    .wrap-content-home h1 {
+        margin-top: 5rem;
+    }
+
+
+     .p-container-home {
+        width: 90%;
+        margin-top: 5rem;
+    }
+
+    .p-container-home p {
+        font-size: 20px;
+        
+    }
+
+    .btn-wrapper-home {
+        margin-top: 5rem;
+  } 
+
+    .btn-wrapper-home button {
+       color: #1D3557;
+       border: 1px solid #1D3557;
+       background: none;
+        width: 12rem;
+        padding: 0.8em;
+        font-size: 16px;
+        transition: 0.5s;
+        font-weight: 600;
+}
+
+.btn-wrapper-home button:hover {
+    background: #F8F8FF;
+    color: #1D3557;
+    
+    transition: 0.3s ease-in;
+}
+}
