@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../../styles/register/register.css';
 import { Link } from 'react-router-dom';
 
@@ -27,10 +27,15 @@ const Register = () => {
        
       });
 
+      const [nome, setNome] = useState()
+      const [sobrenome, setSobrenome] = useState()
+      const [email, setEmail] = useState()
+      const [senha, setSenha] = useState()
       
       
 
     function onSubmit(userData, event) {
+      // let arrayPessoas = JSON.parse(localStorage.getItem('cadastros'))
         console.log(userData);
         event.preventDefault();
         const url = 'http://localhost:3000/api/estudantes';
@@ -52,10 +57,8 @@ const Register = () => {
           .then(response => {
             console.log(response.status);
           });
-        
-
+          window.location.href = 'http://localhost:3001/Login'
     }
-
     
 
     
@@ -100,22 +103,30 @@ const Register = () => {
                         <div className='input-field-aut'>
                         
                         <div className='input-box-aut'>
-                        <input type='text' placeholder='Nome:' className='input-aut' {...register("nome", { required: true })} style={{borderBottom: errors.nome?.message ? '1px solid red' : '' }}  />
+                        <input type='text' placeholder='Nome:' className='input-aut' {...register("nome", { required: true })} style={{borderBottom: errors.nome?.message ? '1px solid red' : '' }}  
+                        onChange={(e) => setNome(e.target.value)}
+                        />
                         <span className='span'>{errors.nome?.message}</span>
                         </div>
 
                         <div className='input-box-aut'>
-                        <input type='text' placeholder='Sobrenome:' className='input-aut' {...register("sobrenome", { required: true })} style={{ borderBottom: errors.sobrenome?.message ? '1px solid red' : '' }}/>
+                        <input type='text' placeholder='Sobrenome:' className='input-aut' {...register("sobrenome", { required: true })} style={{ borderBottom: errors.sobrenome?.message ? '1px solid red' : '' }}
+                          onChange={(e) => setSobrenome(e.target.value)}
+                        />
                         <span className='span'>{errors.sobrenome?.message}</span>
                         </div>
                         
                         <div className='input-box-aut'>
-                        <input type='text' placeholder='Email:' className='input-aut' {...register("email", { required: true })} style={{ color: errors.email?.message ? 'red' : '', borderBottom: errors.email?.message ? '1px solid red' : '' }}/>
+                        <input type='text' placeholder='Email:' className='input-aut' {...register("email", { required: true })} style={{ color: errors.email?.message ? 'red' : '', borderBottom: errors.email?.message ? '1px solid red' : '' }}
+                          onChange={(e) => setEmail(e.target.value)}
+                        />
                         <span className='span'>{errors.email?.message}</span>
                         </div>
                         
                         <div className='input-box-aut'>
-                        <input type='password' placeholder='Senha:' className='input-aut' {...register("senha", { required: true })} style={{ color: errors.senha?.message ? 'red' : '', borderBottom: errors.senha?.message ? '1px solid red' : '' }}/>
+                        <input type='password' placeholder='Senha:' className='input-aut' {...register("senha", { required: true })} style={{ color: errors.senha?.message ? 'red' : '', borderBottom: errors.senha?.message ? '1px solid red' : '' }}
+                          onChange={(e) => setSenha(e.target.value)}
+                        />
                         <span className='span'>{errors.senha?.message}</span>
                         </div>
                        
@@ -128,7 +139,7 @@ const Register = () => {
                         </div>
                         
                         <div className='btn-wrapper-aut'>
-                        <button className='submit-form-btn-aut' type='submit'>Cadastrar</button>
+                        <button className='submit-form-btn-aut' type='submit' >Cadastrar</button>
                         </div>
 
                 </form>

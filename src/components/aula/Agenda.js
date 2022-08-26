@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
-import '../../styles/main/main.css';
+import '../../styles/formulario/formulario.css';
 import educatorImg from '../../assets/main/img/educator-bg.png'
 import logoFooter from '../../assets/footer/img/logo-footer.png';
 import instagram from '../../assets/footer/svg/instagram.svg';
@@ -10,12 +10,43 @@ import linkedin from '../../assets/footer/svg/linkedin.svg';
 import { NavLink } from 'react-router-dom';
 
 
-const Main = () => {
+const Formulario = () => {
+    const [data, setData] = useState([])
+    const getAulas = async () => {
+        const response = await fetch('http://localhost:3000/api/aulas')
+        const json = await response.json()
+        setData(json)
+        
+    
+}
 
+useEffect(() => {
+    getAulas()
+}, [])
     const [click, setClick] = useState(false);
 
     const handleClick = () => setClick(!click);
     const Close = () => setClick(false);
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      const url = 'http://localhost:3000/api/formularios/' ;
+      const options = {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json;charset=UTF-8'
+        },
+        body: JSON.stringify({
+          img: event.target.img.value,
+        })
+      };
+     
+      fetch(url, options)
+        .then(response => {
+          console.log(response.status);
+          alert('Aula cadastrada com Sucesso!')
+        });
+    }
 
 
     return(
@@ -24,8 +55,8 @@ const Main = () => {
          <nav className="navbar" onClick={e => e.stopPropagation()}>
            <div className="nav-container">
              <NavLink exact to="/" className="nav-logo">
-               CodeBucks
-               <i className="fa fa-code"></i>
+              INFINITY©
+              
              </NavLink>
              <ul className={click ? "nav-menu active" : "nav-menu"}>
                <li className="nav-item">
@@ -42,23 +73,23 @@ const Main = () => {
                <li className="nav-item">
                  <NavLink
                    exact
-                   to="/Home"
+                   to="/AboutUs"
                    activeClassName="active"
                    className="nav-links"
                    onClick={click ? handleClick : null}
                  >
-                   About
+                   AboutUs
                  </NavLink>
                </li>
                <li className="nav-item">
                  <NavLink
                    exact
-                   to="/Home"
+                   to="/Agenda"
                    activeClassName="active"
                    className="nav-links"
                    onClick={click ? handleClick : null}
                  >
-                   Blog
+                   Agenda
                  </NavLink>
                </li>
                <li className="nav-item">
@@ -78,6 +109,15 @@ const Main = () => {
              </div>
            </div>
          </nav>
+         <div className='formulario'>
+             <form onSubmit={handleSubmit}>
+                <h3>Agenda</h3>
+                    <label>
+                       <input type='file'></input>
+                    </label>
+                    
+             </form>
+         </div>
          <footer className='main-footer'>
 
 <div className='main-footer-content'>
@@ -199,4 +239,4 @@ const Main = () => {
     )
 }
 
-export default Main
+export default Formulario

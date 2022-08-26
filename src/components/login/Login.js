@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import '../../styles/login/login.css';
-import {Link} from 'react-router-dom';
+import {Link, BrowserRouter, Route, Navigate} from 'react-router-dom';
 
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -15,6 +15,11 @@ const schema = yup.object({
   }).required();
 
 const Login = (props) => {
+      const [email, setEmail] = useState()
+      const [senha, setSenha] = useState()
+      const [data, setData] = useState([])
+      
+
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
@@ -22,30 +27,34 @@ const Login = (props) => {
         
        
       });
-      async function onSubmit(userData, event) {
-        console.log(userData);
-        event.preventDefault();
-        const url = 'http://localhost:3000/api/estudanteslogin';
-        const options = {
-          method: 'POST',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json;charset=UTF-8'
-          },
-          body: JSON.stringify({
-            email: event.target.email.value,
-            senha: event.target.senha.value
-          })
-        };
-        await fetch(url, options)
-          .then(response => {
-            console.log(response.json());
-          });
-        
-
-    }
 
 
+      const showBd = async () =>{
+          const response = await fetch('http://localhost:3000/api/estudantes')
+          const json = await response.json()
+          var encontrou = false 
+          let userLogado = []
+
+          setData(json)
+
+          for(var i = 0; i<json.data.length; i++){
+            if((email == json.data[i].email) && (senha == json.data[i].senha)){
+              encontrou = true
+              break
+            }else{
+
+            }
+          }
+          if(encontrou){
+            userLogado.push(json.data[i])
+            localStorage.setItem('User_Logado', JSON.stringify(userLogado))
+            window.location.href = 'http://localhost:3001/Teste'
+          }else{
+            alert('Email ou senha inválidos')
+          }
+      }
+
+  
 
 
 
@@ -57,11 +66,6 @@ const Login = (props) => {
                 <div className='illustration-aut'>
                     
                 </div>
-
-                {/* <div className='title-aut'>
-                    <h1>Reiventando a forma de aprender.</h1>
-                    
-                </div> */}
 
                 <div className='subtitle-aut'>
                 <h3>Ainda não criou sua conta? 
@@ -84,32 +88,39 @@ const Login = (props) => {
 
                     </div>
 
-                <form className='form-group-aut' onSubmit={handleSubmit(onSubmit)}>
+                <form className='form-group-aut' onSubmit={handleSubmit(showBd)}>
                     <div className='input-field-aut'>
                     
                    
 
                     
                     <div className='input-box-aut-lg'>
-                    <input type='text' placeholder='Email:' className='input-aut' {...register("email", { required: true })} style={{ borderBottom: errors.email?.message ? '1px solid red' : '' }}/>
-                    <span className='span-lg'>{errors.email?.message}</span>
+                    <input type='text' placeholder='Email:' className='input-aut' {...register("email", { required: true })} style={{ borderBottom: errors.email?.message ? '1px solid red' : '' }}
+                      onChange={(e) => setEmail(e.target.value)}
+
+                    />
+                    <span className='span-lg' >{errors.email?.message}</span>
                     </div>
                     
                     <div className='input-box-aut-lg'>
-                    <input type='password' placeholder='Senha:' className='input-aut' {...register("senha", { required: true })} style={{ color: errors.senha?.message ? 'red' : '', borderBottom: errors.senha?.message ? '1px solid red' : ''}}/>
+                    <input type='password' placeholder='Senha:' className='input-aut' {...register("senha", { required: true })} style={{ color: errors.senha?.message ? 'red' : '', borderBottom: errors.senha?.message ? '1px solid red' : ''}}
+                      onChange={(e) => setSenha(e.target.value)}
+                    />
                     <span className='span-lg'>{errors.senha?.message}</span>
                     </div>
-                   
-                  
-                    
+                                  
 
                     </div>
                     
                     <div className='btn-wrapper-aut'>
+        
+                      
                     <button className='submit-form-btn-aut' type='submit' >Entrar</button>
+                  
                     </div>
 
             </form>
+            
 
             <div className='subtitle-bp-900px-aut'>
                 <h3>Ainda não criou sua conta? <span>  Cadastre-se :)</span> </h3>
