@@ -1,570 +1,146 @@
-* {
-    margin: 0;
-    padding: 0;
-  }
-  
- 
-  
-  .pages {
-    color: #316685;
-    text-align: center;
-    font-size: calc(1.5rem + 2vw);
-    margin-top: 10%;
-    
-   
-  }
-  
-  .navbar {
-    background-color: #1f5156;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 20;
-  }
-  
-  .nav-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 80px;
-    max-width: 1500px;
-  }
-  
-  .main-container{
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    background-color:rgba(0,0,0,0.3);
-  }
-  
-  .nav-logo {
-    color: #f5b921;
-    align-items: center;
-    margin-left: 20px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-    flex-grow: 1;
-  }
-  
-  .nav-menu {
-    display: flex;
-    list-style: none;
-    text-align: center;
-    margin-right: 2rem;
-  }
-  
-  .nav-links {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    height: 100%;
-    border-bottom: 3px solid transparent;
-  }
-  .fa-code {
-    margin-left: 1rem;
-  }
-  
-  .nav-item {
-    line-height: 40px;
-    margin-right: 1rem;
-  }
-  
-  .nav-item:after {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 0;
-    background: transparent;
-    transition: width 0.7s ease, background-color 0.5s ease;
-  }
-  
-  .nav-item:hover:after {
-    width: 100%;
-    background: #ffdd40;
-  }
-  
-  .nav-item.active {
-    color: #ffdd40;
-    border: 1px solid #ffdd40;
-  }
-  
-  .nav-icon {
-    display: none;
-  }
-  
-  @media screen and (max-width: 960px) {
-    
-    .nav-menu {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      border-top: 1pxsolid #fff;
-      position: absolute;
-      top: 80px;
-      left: -110%;
-      opacity: 1;
-      transition: all 0.5s ease;
-    }
-  
-    .nav-menu.active {
-      background: #1f5156;
-      left: 0px;
-      opacity: 1;
-      transition: all 0.5s ease;
-      z-index: 1;
-    }
-    .nav-item .active {
-      color: #ffdd40;
-      border: none;
-    }
-    .nav-links {
-      padding: 1.5rem;
-      width: 100%;
-      display: table;
-    }
-  
-    .nav-icon {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translate(-100%, 60%);
-      font-size: 1.8rem;
-      cursor: pointer;
-      color: #ffdd40;
-    }
-  }
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* NX = not expanded */
+
+.side-nav-container {
+	background-color: #031D44;
+	width: 300px;
+	height: 100vh;
+	position: relative;
+	color: #F8F8FF;
+	transition: 0.3s ease-in-out;
+}
+.side-nav-container-NX {
+	width: 85px;
 }
 
-.main-wrapper {
-    min-height: 100vh;
-    background-color: #F8F8FF;   
+.nav-upper,
+.nav-heading,
+.nav-menu,
+.nav-footer {
+	display: grid;
 }
 
-.main-nav {
-    height: 10vh;
-    border: 1px solid red;
+.nav-heading {
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr;
+	height: 75px;
+	display: flex;
 }
 
-.container-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.nav-brand {
+	color: #F8F8FF;
+	margin: 0 auto;
+}
+.nav-brand h2 {
+	text-align: center;
 }
 
-.mini-container-math-main, 
-.mini-container-portuguese-main,
-.mini-container-geography-main,
-.mini-container-physics-main,
-.mini-container-chemistry-main,
-.mini-container-biology-main,
-.mini-container-history-main,
-.mini-container-filosofy-main,
-.mini-container-sociology-main,
-.mini-container-english-main,
-.mini-container-spanish-main,
-.mini-container-redaction-main {
-    width: 90%;
-    height: 15rem;
-    border-radius: 3px;
-    margin: 2rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
+.hamburger {
+	background: none;
+	border: none;
+	cursor: pointer;
+	margin: auto;
 }
 
-.mini-container-math-main {
-    background: url(../../assets/main/img/bg-math.png) no-repeat center center;
-    background-size: cover;
+.hamburger span {
+	display: block;
+	margin-top: 5px;
+	background-color: #F8F8FF;
+	height: 3px;
+	width: 30px;
+	transition: 0.4s ease-in-out;
+	border-radius: 5px;
 }
 
-.mini-container-portuguese-main {
-    background: url(../../assets/main/img/bg-portuguese.png) no-repeat center center;
-    background-size: cover;
+.hamburger-in {
+	transform: rotate(180deg);
 }
 
-    .mini-container-geography-main,
-    .mini-container-physics-main,
-    .mini-container-chemistry-main,
-    .mini-container-biology-main,
-    .mini-container-history-main,
-    .mini-container-filosofy-main,
-    .mini-container-sociology-main,
-    .mini-container-english-main,
-    .mini-container-spanish-main,
-    .mini-container-redaction-main {
-    background: url(../../assets/main/img/bg-geography.png) no-repeat center center;
-    background-size: cover;
+.hamburger-in span:nth-child(1) {
+	width: 13px;
 }
 
-.container-main h1 {
-    color:#031D44;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+.hamburger-in span:nth-child(2) {
+	width: 21px;
 }
-
-.container-main button {
-    width: 10rem;
-    padding: 1rem;
-    font-size: 1rem;
-    border: 1px solid #031D44;
-    font-weight: bold;
-    color: #031D44;
-    border-radius: 2px;
-    background: transparent;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 200ms ease-in-out;
-}
-
-.container-main button:hover {
-    transform: scale(0.99);
-    background-color: #031D44;
-    color: #F8F8FF;
-}
-
-.main-footer {
-    height: 60vh;
-    padding: 0 2rem;
-    background-color: #031D44;
-}
-
-.main-footer-content {
-    height: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.content-section {
-    width: 40%;
-    height: 100%;
-    /* border: 1px solid red; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 2rem;
+	
+.hamburger-in span:nth-child(3) {
+	width: 30px;
 }
 
 
-
-
-
-.content-section h1 {
-    color: #F8F8FF;
+.nav-menu {
+	grid-template-rows: repeat(7, 1fr);
+	margin-top: 50px;
 }
 
-.effect-text-footer-main  {
-     max-width: 100%;
-     /* border: 1px solid red; */
-     padding: 2rem 0;
-     display: flex;
-    align-items: center;
-    
+.nav-menu {
+	grid-template-rows: repeat(7, 1fr);
+	margin-top: 50px;
 }
 
-.effect-text-footer-main p {
-    color: gray;
-    text-align: justify;
-    font-weight: 600;
-    font-size: 14px;
+.menu-item {
+	height: 57px;
+	display: flex;
+	color: #F8F8FF;
+	text-decoration: none;
+	margin: auto 20px;
+	transition: 200ms ease-in-out;
+	border-radius: .2rem;
+	cursor: pointer;
 }
 
-.icons-social-media-footer-main {
-    width: 100%;
-    /* border: 1px solid red; */
-    display: flex;
-    align-items: center;
-    
+.menu-item-NX {
+	margin: auto;
+}
+.menu-item:hover {
+	background-color: #457b9d;
+	font-weight: bold;
+}
+.menu-item img {
+	padding: 0 20px;
 }
 
-
-
-.bg-radius-icons-footer {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: gray;
-    border-radius: 2px;
-    margin-right: 2rem;
-    cursor: pointer; 
-    transition: 300ms;
+.nav-footer {
+	width: 100%;
+	height: 87px;
+	position: absolute;
+	bottom: 0;
+	grid-template-rows: 1fr;
+	grid-template-columns: 2fr 1fr;
+	display: flex;
 }
 
-.bg-radius-icons-footer img {
-    transition: 300ms;
+.nav-details {
+	display: flex;
+}
+.nav-details img {
+	width: 50px;
+	padding: 0 20px;
 }
 
-
-.bg-radius-icons-footer:hover img {
-    transform: scale(1.1);
+.nav-footer-user-name {
+	font-size: 18px;
+	font-weight: 900;
 }
 
-
-
- .rules-section, .address-section, .last-section {
-    width: 20%;
-    height: 100%;
-    margin: 0 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* border: 1px solid red; */
-    
+.menu-item-icon {
+	pointer-events: none;
+	width: 22px;
 }
 
-.wrapper-content-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-   }
-
-
-
-.rules-section h2, .address-section h2, .last-section h2 {
-    color: #F8F8FF;
-    text-align: justify;
-    font-size: 20px;
-    
+.nav-footer-user-position {
+	margin-top: -15px;
+	color: #e5e5e5;
 }
-
-.ul-footer {
-    padding: 0.2rem 0;
-    text-align: justify;
-    height: 50%;
-    
+.logout-icon {
+	width: 22px;
+	margin: auto;
+	border-radius: .2rem;
+	padding: 20px;
+	/* margin-left: 5px; */
+	transition: 200ms ease-in-out;
+	cursor: pointer;
 }
-
-.li-footer {
-    list-style: none;
-    padding: 0.5 0rem;
-    margin-top: 0.8rem;
+.logout-icon:hover {
+	background-color: #457b9d;
 }
-
-.footer-link {
-    text-decoration: none;
-    color: gray;
-    font-size: 14px;
-    font-weight: 600;
-    transition: 200ms ease-in-out;
-}
-
-.footer-link:hover {
-    text-decoration: underline;
-    color: #F8F8FF;
-}
-
-
-
-.final-footer-text {
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.final-footer-text h5 {
-    color: gray;
-    font-weight: 600; 
-}
-
-
-@media screen and (min-width: 768px) {
-    .mini-container-math-main, 
-    .mini-container-portuguese-main,
-    .mini-container-geography-main,
-    .mini-container-physics-main,
-    .mini-container-chemistry-main,
-    .mini-container-biology-main,
-    .mini-container-history-main,
-    .mini-container-filosofy-main,
-    .mini-container-sociology-main,
-    .mini-container-english-main,
-    .mini-container-spanish-main,
-    .mini-container-redaction-main {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .mini-container-math-main, 
-    .mini-container-portuguese-main,
-    .mini-container-geography-main,
-    .mini-container-physics-main,
-    .mini-container-chemistry-main,
-    .mini-container-biology-main,
-    .mini-container-history-main,
-    .mini-container-filosofy-main,
-    .mini-container-sociology-main,
-    .mini-container-english-main,
-    .mini-container-spanish-main,
-    .mini-container-redaction-main
-    {
-        justify-content: space-between;
-        padding: 0 3rem;
-    }
-}
-* {
-    margin: 0;
-    padding: 0;
-  }
-  
- 
-  
-  .pages {
-    color: #316685;
-    text-align: center;
-    font-size: calc(1.5rem + 2vw);
-    margin-top: 10%;
-    
-   
-  }
-  
-  .navbar {
-    background-color: #1f5156;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 20;
-  }
-  
-  .nav-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 80px;
-    max-width: 1500px;
-  }
-  
-  .main-container{
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    background-color:rgba(0,0,0,0.3);
-  }
-  
-  .nav-logo {
-    color: #f5b921;
-    align-items: center;
-    margin-left: 20px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-    flex-grow: 1;
-  }
-  
-  .nav-menu {
-    display: flex;
-    list-style: none;
-    text-align: center;
-    margin-right: 2rem;
-  }
-  
-  .nav-links {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    height: 100%;
-    border-bottom: 3px solid transparent;
-  }
-  .fa-code {
-    margin-left: 1rem;
-  }
-  
-  .nav-item {
-    line-height: 40px;
-    margin-right: 1rem;
-  }
-  
-  .nav-item:after {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 0;
-    background: transparent;
-    transition: width 0.7s ease, background-color 0.5s ease;
-  }
-  
-  .nav-item:hover:after {
-    width: 100%;
-    background: #ffdd40;
-  }
-  
-  .nav-item.active {
-    color: #ffdd40;
-    border: 1px solid #ffdd40;
-  }
-  
-  .nav-icon {
-    display: none;
-  }
-  
-  @media screen and (max-width: 960px) {
-    
-    .nav-menu {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      border-top: 1pxsolid #fff;
-      position: absolute;
-      top: 80px;
-      left: -110%;
-      opacity: 1;
-      transition: all 0.5s ease;
-    }
-  
-    .nav-menu.active {
-      background: #1f5156;
-      left: 0px;
-      opacity: 1;
-      transition: all 0.5s ease;
-      z-index: 1;
-    }
-    .nav-item .active {
-      color: #ffdd40;
-      border: none;
-    }
-    .nav-links {
-      padding: 1.5rem;
-      width: 100%;
-      display: table;
-    }
-  
-    .nav-icon {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translate(-100%, 60%);
-      font-size: 1.8rem;
-      cursor: pointer;
-      color: #ffdd40;
-    }
-  }
-  
